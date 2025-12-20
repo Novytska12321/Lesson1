@@ -1,6 +1,16 @@
+// Font
+$font-size-base: 1rem; // 16px
+$font-family-base: 'Manrope', sans-serif; // Google Font
+
+// Container
 $container-max-widths: (
     sm: 540px,
     md: 720px,
     lg: 960px,
     xl: 1180px);
- $navbar-brand-margin-end: 3.25rem;
+
+// Navbar
+$navbar-brand-margin-end: 3.25rem;
+$navbar-padding-y: 1.1875rem;
+$nav-link-font-size: $font-size-base * .875; // 14px
+$nav-link-color: #ff0000;
