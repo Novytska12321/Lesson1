@@ -1,0 +1,20 @@
+.y-btn-outline-primary {
+  border-color: $btn-outline-primary-border-color;
+
+  &:hover {
+    border-color: $btn-outline-primary-border-color-hover;
+    background-color: transparent;
+    color: $btn-outline-primary-color-hover;
+  }
+}
+.y-btn-outline-primary-social {
+  display: inline-flex;
+  width: $btn-height;
+  height: $btn-height;
+  font-size: 23px;
+  line-height: 1;
+  background-color: $btn-outline-primary-social-bg;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
