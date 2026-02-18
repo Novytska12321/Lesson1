@@ -14,7 +14,8 @@
 @use "@fortawesome/fontawesome-free/scss/solid" as fa-solid;
 @use "@fortawesome/fontawesome-free/scss/brands" as fa-brands;
 
-@import "variables";
+@import "variables"; // $secondary: red
 @import "bootstrap/scss/bootstrap";
 @import "navbar";
 @import "buttons";
+@import "hero";

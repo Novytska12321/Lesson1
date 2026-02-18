@@ -2,7 +2,9 @@ $line-height-base: 1.5;
 $body-bg: #1c2225;
 $body-color: rgba(252, 249, 249, 0.4);
 $primary: #fcf9f9;
-$hover-primary: #ecd979;
+$secondary: #ecd979;
+// $brand-color: #ecd979;
+$hover-primary: $secondary;
 $spacer: 1rem;
 
 // Font
@@ -40,3 +42,7 @@ $btn-outline-primary-social-bg: rgba(252, 249, 249, 0.1);
 $btn-height: calc(
   $btn-padding-y * 2 + $btn-font-size * $btn-line-height + $btn-border-width * 2
 );
+
+// Hero
+$hero-lead-color: $primary;
+$hero-font-size: 4rem;
