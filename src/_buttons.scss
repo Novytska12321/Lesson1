@@ -1,5 +1,22 @@
+.y-btn {
+  text-transform: uppercase;
+}
+
+.y-btn-with-icon {
+  > i {
+    margin-left: 0.625rem;
+    transform: rotate(-45deg); // not recommended
+  }
+}
+
 .y-btn-outline-primary {
   border-color: $btn-outline-primary-border-color;
+  
+  &.y-btn-with-icon {
+    > i {
+      color: $secondary;
+    }
+  }
 
   &:hover {
     border-color: $btn-outline-primary-border-color-hover;

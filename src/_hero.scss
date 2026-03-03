@@ -1,5 +1,7 @@
-// .y-hero {
-// }
+.y-hero {
+  padding-top: 5.3125rem;
+  padding-bottom: 5.3125rem;
+}
 
 // .y-hero-img {
 // }
@@ -9,4 +11,23 @@
   font-size: $hero-font-size;
   line-height: 1.15625;
   letter-spacing: -0.03em;
+  
+}
+
+.y-hero-handmade {
+  width: 7rem;
+  text-align: center;
+}
+
+.y-hero-handmade-img {
+  margin-bottom: 1rem;
+}
+
+.y-hero-handmade-text {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: -0.04em;
+}
+.y-hero-btn{
+margin-left: 11.3125rem;
 }
