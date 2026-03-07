@@ -1,0 +1,13 @@
+.y-about-us {
+  padding-top: $spacer * 5;
+  padding-bottom: $spacer * 5;
+  background-image: url("/desctop-img/elements.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.y-about-us-heading{
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: $spacer * 2.5;
+  color: $primary;
+}
