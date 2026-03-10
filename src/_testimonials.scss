@@ -1,0 +1,32 @@
+.y-testimonials {
+    padding-top: $spacer * 9;
+    padding-bottom: $spacer * 9;
+}
+
+.y-testimonials-heading {
+    margin-bottom: $spacer * 4.5;
+}
+
+.y-testimonials-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 $spacer * 1.125 $spacer * 1.125;
+   
+}
+
+.y-testimonials-item-img {
+    margin-top: -$spacer * 2;
+    object-fit: cover;
+    
+}
+
+.y-testimonials-item-name {
+    font-size: $spacer * 1.25;
+}
+
+.y-testimonials-item-quote {
+   text-align: center;
+   margin-bottom: 0;
+}
