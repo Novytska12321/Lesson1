@@ -1,6 +1,4 @@
 .y-navbar {
-  .y-navbar-container {
-  }
   .y-navbar-nav {
     flex-direction: row;
   }
@@ -20,5 +18,9 @@
     text-transform: uppercase;
     padding-left: $navbar-nav-link-padding-y;
     padding-right: $navbar-nav-link-padding-y;
+
+    &:hover {
+      color: $secondary;
+  }
   }
 }
