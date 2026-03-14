@@ -13,13 +13,18 @@
     justify-content: flex-start;
     flex-direction: column;
     padding: 0 $spacer * 1.125 $spacer * 1.125;
-   
+    overflow: visible; // додай це
 }
 
 .y-testimonials-item-img {
-    margin-top: -$spacer * 2;
+    margin-top: -2rem;
     object-fit: cover;
-    
+    width: 4rem;
+    height: 4rem;
+    flex-shrink: 0;
+    position: relative; // додай це
+    z-index: 1; // додай це
+    overflow: hidden; // додай це
 }
 
 .y-testimonials-item-name {
