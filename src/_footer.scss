@@ -1,0 +1,27 @@
+.y-footer{
+    background-image: url(../public/desctop-img/elements-yellow.png);
+    background-repeat: no-repeat;
+    background-position: right 5rem bottom;
+    background-size: auto 100%;
+}
+.y-footer-nav {
+    font-size: $footer-nav-font-size;
+    text-transform: uppercase;
+    margin-bottom: $footer-nav-margin-bottom;
+}
+
+.y-footer-nav-link {
+    color: $footer-nav-link-color;
+    padding-left: $footer-nav-link-padding-y;
+    padding-right: $footer-nav-link-padding-y;
+    
+    &:hover {
+        color: $secondary;
+    }
+}
+.y-footer-text{
+font-size: $footer-text-font-size;
+line-height: 1.15625;
+letter-spacing: -0.03em;
+color: $footer-text-color;
+}
