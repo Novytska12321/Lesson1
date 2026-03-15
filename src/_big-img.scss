@@ -1,0 +1,12 @@
+.y-big-img {
+  padding-top: 9.375rem;
+  padding-bottom: 9.375rem;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;     
+    height: 48.5rem;
+    object-fit: cover;
+  }
+}

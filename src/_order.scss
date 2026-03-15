@@ -1,0 +1,23 @@
+.y-order {
+    .row > .col-6:last-child {
+      padding-left: $order-gap;
+    }
+  
+    form {
+      height: $order-form-height;
+      margin-bottom: $order-btn-gap;
+    }
+    textarea.form-control {
+      height: 12.25rem; // 196px
+      resize: none;    
+    }
+  }
+  .y-order-text{
+    font-size: $order-text-font-size;
+    margin-bottom: 2.5rem;
+  }
+  .y-order{
+    background-image: url(../public/desctop-img/elements.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
