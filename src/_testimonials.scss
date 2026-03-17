@@ -13,7 +13,8 @@
     justify-content: flex-start;
     flex-direction: column;
     padding: 0 $spacer * 1.125 $spacer * 1.125;
-    overflow: visible; // додай це
+    overflow: visible;
+    height: 100%;
 }
 
 .y-testimonials-item-img {
