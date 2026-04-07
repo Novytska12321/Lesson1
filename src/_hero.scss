@@ -9,6 +9,13 @@
 .y-hero-lead-text {
   color: $hero-lead-color;
   font-size: $hero-font-size;
+  @include media-breakpoint-up(md) {
+    @include font-size($hero-font-size-md);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    @include font-size($hero-font-size-xxl);
+  }
   line-height: 1.15625;
   letter-spacing: -0.03em;
   

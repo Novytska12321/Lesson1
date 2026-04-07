@@ -13,13 +13,28 @@ $border-color: rgba(252, 249, 249, 0.1);
 $font-size-base: 1rem; // 16px
 $font-family-base: "Manrope", sans-serif; // Google Font
 
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1440px
+) ;
+
+
+
 // Container
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1264px,
+  xl: 1204px,  //1180
+  xxl: 1264px, // 1240px
+  
 );
+
 
 // Navbar
 $navbar-brand-margin-end: 3.25rem;
@@ -47,7 +62,9 @@ $btn-height: calc(
 
 // Hero
 $hero-lead-color: $primary;
-$hero-font-size: 4rem;
+$hero-font-size: 2.75rem; // mobile and tab, 44px
+$hero-font-size-md: 3.375rem; // medium, 54px
+$hero-font-size-xxl: 4rem; // xxlarge, 64px
 
 
 // Our collection
