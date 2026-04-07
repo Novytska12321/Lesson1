@@ -1,3 +1,135 @@
 ---
-alwaysApply: true
+description: Styling rules for SCSS architecture, Bootstrap usage, custom class naming, and visual consistency in the landing page project
+globs:
+  - "**/*.scss"
+  - "**/*.html"
 ---
+
+# Styling Rules
+
+## General Approach
+
+- Use Bootstrap as the primary styling and layout foundation.
+- Add custom SCSS only when Bootstrap does not cover the required design or behavior.
+- Do not override Bootstrap globally unless there is a clear project-wide reason.
+- Keep the project educational, readable, and easy to maintain.
+
+## Custom Class Naming
+
+- Prefix all project-specific CSS classes with `y-`.
+- Use `y-` classes to distinguish custom styles from Bootstrap and third-party library classes.
+- Keep class names descriptive and section-oriented.
+- Prefer consistent naming across all sections and components.
+
+### Good examples
+- `y-hero`
+- `y-hero-img`
+- `y-btn`
+- `y-btn-outline-primary`
+- `y-navbar`
+- `y-order-form`
+
+### Avoid
+- Generic names without prefix
+- Conflicting names that could be mistaken for Bootstrap classes
+- Deeply nested BEM-style selectors when a simple section-based name is enough
+
+## Bootstrap Usage
+
+Use Bootstrap classes whenever they fit the design:
+- layout: `container`, `row`, `col-*`
+- content: typography and reboot classes
+- components: buttons, navbar, navs
+- helpers and utilities: display, flex, spacing, alignment
+
+When a Bootstrap class needs custom appearance, create a parallel project class with the `y-` prefix instead of modifying Bootstrap itself.
+
+## Combining Bootstrap and Project Styles
+
+It is acceptable to combine both systems on the same element.
+
+Example pattern:
+- Bootstrap class for base behavior
+- `y-` class for project-specific styling
+
+This keeps the markup expressive and avoids global overrides.
+
+## SCSS Structure
+
+### Current principle
+Treat `styles.scss` as the main entry point and keep section styles in separate partial files.
+
+### Intended structure
+The project should follow a Sass architecture inspired by the `7-1` pattern, using dedicated folders for:
+- abstract configuration
+- base styles
+- layout sections
+- reusable components
+- vendor imports
+
+### Suggested folder meaning
+- `abstract/` — variables, mixins, functions, configuration
+- `base/` — foundational page styles and resets
+- `layout/` — header, hero, footer, major sections
+- `components/` — buttons and reusable UI blocks
+- `vendors/` — Bootstrap and Font Awesome style entry points
+
+## Variables
+
+- Keep shared styling values in `_variables.scss`.
+- Use it for Bootstrap overrides and custom design tokens.
+- Store values such as:
+  - body background
+  - base font family
+  - container widths
+  - section-specific sizes
+  - layout constants
+  - reusable design values
+
+## Bootstrap Overrides
+
+- Prefer configuration over ad-hoc overrides.
+- If Bootstrap variables need to change, do it in the SCSS configuration layer.
+- Keep the override strategy explicit and easy to find.
+- Do not patch Bootstrap styles directly in many places.
+
+## Example Usage Pattern
+
+A custom project button may combine Bootstrap and project classes in HTML, while custom SCSS defines the project-specific parts.
+
+The intention is:
+- Bootstrap provides the base behavior and layout
+- `y-` classes provide project-specific identity and any extra presentation rules
+
+## Typography
+
+- Use the configured project font as the base font family.
+- Keep typography consistent across the page.
+- Use Bootstrap typography helpers when appropriate.
+
+## Icons
+
+- Use Font Awesome for icons.
+- Keep icon usage simple and consistent.
+- Use icons where they support usability or visual clarity, not as decoration everywhere.
+
+## Responsive Design
+
+- Use Bootstrap grid and utilities first for responsiveness.
+- Add custom media queries only when needed.
+- Keep mobile-first thinking.
+- Make section-level styles responsive without overcomplicating the CSS.
+
+## Maintainability
+
+- Keep section styles isolated.
+- Prefer one partial per major section or component group.
+- Avoid large monolithic SCSS files.
+- Make it easy to locate where a visual change belongs.
+
+## Notes for AI Assistants
+
+- Follow the `y-` prefix convention for all project-specific classes.
+- Do not suggest global Bootstrap overrides unless the project explicitly needs them.
+- Keep SCSS aligned with the intended 7-1-style structure.
+- Respect the separation between Bootstrap base classes and custom project styles.
