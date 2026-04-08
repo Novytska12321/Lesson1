@@ -11,8 +11,8 @@ globs:
 
 - Use Bootstrap as the primary styling and layout foundation.
 - Add custom SCSS only when Bootstrap does not cover the required design or behavior.
-- Do not override Bootstrap globally unless there is a clear project-wide reason.
 - Keep the project educational, readable, and easy to maintain.
+- Prefer simple, flat, section-oriented styling over deeply nested selector chains.
 
 ## Custom Class Naming
 
@@ -32,7 +32,34 @@ globs:
 ### Avoid
 - Generic names without prefix
 - Conflicting names that could be mistaken for Bootstrap classes
-- Deeply nested BEM-style selectors when a simple section-based name is enough
+- Deeply nested selector structures
+- Overly complex BEM modifiers when a simpler section-based name is enough
+
+## Selector Style
+
+- Prefer flat selectors on the same level whenever possible.
+- Avoid selectors such as `.hero .hero-title` when a direct class like `.hero-title` is enough.
+- Keep element styling close to the class that owns the element.
+- Use nesting sparingly and only when it improves readability without increasing complexity.
+- Do not rely on long descendant chains for normal section styling.
+
+### Preferred pattern
+- `.hero`
+- `.hero-title`
+- `.hero-lead-text`
+- `.hero-btn`
+
+### Less preferred pattern
+- `.hero .hero-title`
+- `.hero .hero-content .hero-title`
+- `.hero .hero-content .hero-actions .hero-btn`
+
+## BEM-Inspired Naming
+
+- Use a light, simplified BEM-inspired style.
+- Keep naming understandable and consistent, but avoid heavy BEM syntax if it makes the stylesheet harder to read.
+- Prefer names that behave like Bootstrap-style class names: clear, flat, and easy to scan.
+- Do not force strict BEM notation if a simpler project-specific name is clearer.
 
 ## Bootstrap Usage
 
@@ -93,19 +120,11 @@ The project should follow a Sass architecture inspired by the `7-1` pattern, usi
 - Keep the override strategy explicit and easy to find.
 - Do not patch Bootstrap styles directly in many places.
 
-## Example Usage Pattern
+## Fonts
 
-A custom project button may combine Bootstrap and project classes in HTML, while custom SCSS defines the project-specific parts.
-
-The intention is:
-- Bootstrap provides the base behavior and layout
-- `y-` classes provide project-specific identity and any extra presentation rules
-
-## Typography
-
-- Use the configured project font as the base font family.
-- Keep typography consistent across the page.
-- Use Bootstrap typography helpers when appropriate.
+- Load external web fonts intentionally and use them as part of the global typography setup.
+- Keep the base font family consistent with the font configuration defined in `_variables.scss`.
+- Treat font loading as part of the project styling setup, not as a one-off page hack.
 
 ## Icons
 
@@ -126,10 +145,19 @@ The intention is:
 - Prefer one partial per major section or component group.
 - Avoid large monolithic SCSS files.
 - Make it easy to locate where a visual change belongs.
+- Keep project-specific styles easy to distinguish from framework styles.
+
+## HTML and Style Coordination
+
+- Use semantic HTML first.
+- Add project-specific classes only where styling or behavior needs them.
+- Keep HTML readable even when multiple Bootstrap and `y-` classes are combined on one element.
+- Avoid using HTML structure as the main styling mechanism when a dedicated class would be clearer.
 
 ## Notes for AI Assistants
 
 - Follow the `y-` prefix convention for all project-specific classes.
+- Prefer flat, readable selectors.
 - Do not suggest global Bootstrap overrides unless the project explicitly needs them.
 - Keep SCSS aligned with the intended 7-1-style structure.
 - Respect the separation between Bootstrap base classes and custom project styles.
