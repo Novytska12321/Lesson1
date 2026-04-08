@@ -1,3 +1,145 @@
 ---
-alwaysApply: true
+description: Semantic HTML structure, section layout, and markup organization rules for the landing page project
+globs:
+  - "**/*.html"
 ---
+
+# HTML Structure Rules
+
+## General Approach
+
+- Use semantic HTML first.
+- Keep the page structure readable and easy to scan.
+- Prefer clear section boundaries over deeply nested markup.
+- Use Bootstrap classes for layout and common behavior when they fit naturally.
+- Add project-specific `y-` classes only when custom styling or behavior needs them.
+- Keep the markup simple enough to understand without opening the stylesheet first.
+
+## Page Structure
+
+The landing page should remain a single-page document with clearly separated sections.
+
+Typical structure:
+- `header`
+- `section` blocks for the main content areas
+- `footer`
+
+Each major content area should live in its own section, with a clear heading and local structure.
+
+## Headings
+
+- Use a logical heading hierarchy.
+- Keep the page title in `h1` only when it represents the primary identity of the page.
+- Use `h2` for major sections.
+- Use `h3` for subsection titles, product names, testimonials, or card-like content.
+
+### Examples
+- `h1` — site identity or main hero title if needed
+- `h2` — About us, Our collection, Your order, Testimonials
+- `h3` — collection item names, testimonial author names
+
+## Navigation
+
+- Use a semantic navigation container for site navigation.
+- Keep navigation links grouped and easy to identify.
+- If the navigation is used for in-page movement, keep anchors consistent with the section ids they represent.
+- For mobile navigation behavior, keep the HTML structure simple enough for JavaScript to toggle without rewriting the markup.
+
+## Section Markup
+
+- Keep each section self-contained.
+- Use a single main wrapper inside each section when that helps layout.
+- Prefer a clear order:
+  - heading
+  - supporting text
+  - image or visual block
+  - call to action or form content
+- Use descriptive class names for section-specific wrappers and elements.
+
+## Bootstrap Markup Usage
+
+Use Bootstrap markup where it improves readability and layout:
+- `container`
+- `row`
+- `col-*`
+- `d-flex`
+- `align-items-*`
+- `justify-content-*`
+- spacing utilities
+- button and form classes
+
+Do not let Bootstrap classes replace semantic meaning.  
+A good element should be both:
+- semantically correct
+- visually convenient to style
+
+## Custom Classes
+
+- Use `y-` classes for project-specific structure or styling hooks.
+- Keep them descriptive and section-based.
+- Prefer flat class names over long hierarchical chains.
+
+### Good examples
+- `y-navbar`
+- `y-navbar-container`
+- `y-navbar-nav`
+- `y-hero`
+- `y-hero-lead-text`
+- `y-order-btn`
+
+### Avoid
+- Overly long structural chains
+- Classes that duplicate Bootstrap behavior without a reason
+- Generic names that do not say what the element belongs to
+
+## Images
+
+- Always provide meaningful `alt` text.
+- Use empty `alt=""` only for decorative images.
+- Keep image wrappers simple and local to the section.
+- Use `img-fluid` or equivalent Bootstrap helpers when the image should scale responsively.
+
+### Notes
+- Image filenames and placement should support the visual structure of the page.
+- Large visual blocks should stay inside the section they belong to.
+
+## Forms
+
+- Keep forms semantic and minimal.
+- Use `label` elements when the form is intended for real user input.
+- Use Bootstrap form classes for standard input styling.
+- Keep form-related markup inside the section that owns the form.
+
+## Links and Buttons
+
+- Use anchor tags for navigation.
+- Use buttons for actions that trigger behavior rather than navigation.
+- If a link behaves like a button visually, keep its semantic purpose clear.
+- Keep call-to-action elements close to the content they act on.
+
+## Footer
+
+- Keep footer markup simple and readable.
+- Use navigation links only if they are truly part of the footer navigation.
+- Keep footer text and supporting elements logically grouped.
+
+## Readability Rules
+
+- Prefer indentation and structure that make the document easy to skim.
+- Avoid unnecessary wrapper elements.
+- Do not use HTML nesting as a substitute for clear class naming.
+- Keep repeated patterns consistent across sections.
+
+## Mobile and Responsive Considerations
+
+- Structure the HTML so that it remains understandable on both desktop and mobile layouts.
+- Do not bake responsive behavior into the markup if CSS or JavaScript can handle it better.
+- Keep the document flexible enough for mobile navigation and responsive rearrangement.
+
+## Notes for AI Assistants
+
+- Preserve semantic structure when editing the page.
+- Keep section names and heading levels consistent.
+- Prefer simple markup changes over structural rewrites.
+- When adding content, follow the existing section-based organization.
+- Keep the page easy to understand before styling is applied.

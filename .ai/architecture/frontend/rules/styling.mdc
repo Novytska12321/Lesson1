@@ -13,6 +13,7 @@ globs:
 - Add custom SCSS only when Bootstrap does not cover the required design or behavior.
 - Keep the project educational, readable, and easy to maintain.
 - Prefer simple, flat, section-oriented styling over deeply nested selector chains.
+- Keep styling decisions easy to trace back to a single file or section.
 
 ## Custom Class Naming
 
@@ -28,6 +29,7 @@ globs:
 - `y-btn-outline-primary`
 - `y-navbar`
 - `y-order-form`
+- `y-testimonials-item`
 
 ### Avoid
 - Generic names without prefix
@@ -56,10 +58,11 @@ globs:
 
 ## BEM-Inspired Naming
 
-- Use a light, simplified BEM-inspired style.
-- Keep naming understandable and consistent, but avoid heavy BEM syntax if it makes the stylesheet harder to read.
+- Use a simplified, BEM-inspired naming style.
+- Keep naming understandable and consistent, but avoid heavy BEM ceremony.
 - Prefer names that behave like Bootstrap-style class names: clear, flat, and easy to scan.
 - Do not force strict BEM notation if a simpler project-specific name is clearer.
+- Use one class per responsibility when possible.
 
 ## Bootstrap Usage
 
@@ -81,37 +84,87 @@ Example pattern:
 
 This keeps the markup expressive and avoids global overrides.
 
+Do not duplicate Bootstrap behavior with custom CSS unless the project specifically needs a visual extension or a behavioral tweak.
+
 ## SCSS Structure
 
-### Current principle
-Treat `styles.scss` as the main entry point and keep section styles in separate partial files.
+The SCSS codebase is organized into a clear folder structure inside `src/styles/`.
 
-### Intended structure
-The project should follow a Sass architecture inspired by the `7-1` pattern, using dedicated folders for:
-- abstract configuration
-- base styles
-- layout sections
-- reusable components
-- vendor imports
+### Entry point
+- `styles/main.scss` is the main SCSS entry file.
+- It imports only folder-level `_index.scss` files.
 
-### Suggested folder meaning
-- `abstract/` — variables, mixins, functions, configuration
-- `base/` — foundational page styles and resets
-- `layout/` — header, hero, footer, major sections
-- `components/` — buttons and reusable UI blocks
-- `vendors/` — Bootstrap and Font Awesome style entry points
+### Folder responsibilities
+
+#### `abstracts/`
+Configuration and SCSS helpers:
+- variables
+- functions
+- mixins
+- shared style tools
+
+These files must not emit page CSS directly.
+
+#### `vendors/`
+Third-party style integration layer:
+- Bootstrap import setup
+- Font Awesome import setup
+- vendor-specific configuration and overrides
+
+Keep vendor-specific imports isolated here.
+
+#### `base/`
+Global foundations:
+- reset
+- typography
+- global page-level defaults
+
+These files may remain small when Bootstrap already provides the needed base styling.
+
+#### `layout/`
+Major page sections and structural styles:
+- navbar
+- hero
+- about us
+- testimonials
+- collection
+- large image block
+- order
+- footer
+
+Each file should focus on one page section or a tightly related group of structural styles.
+
+#### `components/`
+Reusable UI pieces that are not tied to one specific page section:
+- buttons
+- shared interface elements
+- small repeatable widgets
+
+#### `pages/`
+Page-specific styles.
+
+This folder should hold styles that belong only to one view. It is useful even if it starts small, because it keeps the architecture ready for future growth.
+
+## Index Files
+
+- Each folder in `styles/` should have its own `_index.scss`.
+- The `_index.scss` file collects local partial imports for that folder.
+- The root `main.scss` should only import folder-level indexes, not individual partials directly.
+
+This keeps the entry point clean and makes the structure easier to navigate.
 
 ## Variables
 
-- Keep shared styling values in `_variables.scss`.
-- Use it for Bootstrap overrides and custom design tokens.
-- Store values such as:
-  - body background
-  - base font family
-  - container widths
-  - section-specific sizes
-  - layout constants
-  - reusable design values
+Keep shared styling values in `_variables.scss`.
+
+Use it for:
+- Bootstrap overrides
+- custom design tokens
+- base font family
+- container widths
+- section sizes
+- spacing and layout constants
+- reusable style values
 
 ## Bootstrap Overrides
 
@@ -159,5 +212,6 @@ The project should follow a Sass architecture inspired by the `7-1` pattern, usi
 - Follow the `y-` prefix convention for all project-specific classes.
 - Prefer flat, readable selectors.
 - Do not suggest global Bootstrap overrides unless the project explicitly needs them.
-- Keep SCSS aligned with the intended 7-1-style structure.
+- Keep SCSS aligned with the intended folder-based architecture.
 - Respect the separation between Bootstrap base classes and custom project styles.
+- Prefer small, local changes in one section or component over broad stylesheet edits.

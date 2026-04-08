@@ -15,6 +15,7 @@ This is a small one-page landing page created as a learning project. It presents
 - Frontend learning project
 - One-page landing page
 - Built with Vite, Bootstrap, and SCSS
+- Uses minimal TypeScript for small UI interactions
 
 ## Folder Structure
 ```
@@ -28,6 +29,14 @@ This is a small one-page landing page created as a learning project. It presents
             ├── styling.mdc
             └── html-structure.mdc
 ```
+
+## Notes for AI Assistants
+
+- Start with this file to understand the purpose of the `.ai/` folder.
+- Use `architecture/frontend/tech-stack.md` to understand the project layout, stack, and file responsibilities.
+- Use `architecture/frontend/how-to.md` for practical editing recipes.
+- Use `architecture/frontend/rules/styling.mdc` for SCSS, class naming, Bootstrap usage, and visual structure rules.
+- Use `architecture/frontend/rules/html-structure.mdc` for semantic HTML and markup organization rules.
 
 ## Symlinks
 
