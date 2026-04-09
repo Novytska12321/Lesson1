@@ -1,8 +1,13 @@
 .y-footer{
     background-image: url(/desctop-img/elements-yellow.png);
     background-repeat: no-repeat;
-    background-position: right 5rem bottom;
+    background-position: right -9rem bottom;
     background-size: auto 100%;
+    @include media-breakpoint-up(xxl) {
+        background-position: right -4rem bottom 0;
+       }
+       
+    
 }
 .y-footer-nav {
     font-size: $footer-nav-font-size;
