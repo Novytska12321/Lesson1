@@ -17,7 +17,6 @@ globs:
 ## Custom Class Naming
 
 - Prefix all project-specific classes with `y-`.
-- Use `y-` classes to distinguish custom styles from Bootstrap and third-party classes.
 - Keep class names descriptive and section-oriented.
 - Prefer consistent naming across sections and components.
 
@@ -32,33 +31,12 @@ globs:
 - Generic names without prefix
 - Conflicting names that could be mistaken for Bootstrap classes
 - Deeply nested selector structures
-- Overly complex BEM modifiers when a simpler section-based name is enough
 
 ## Selector Style
 
 - Prefer flat selectors whenever possible.
 - Avoid selectors such as `.hero .hero-title` when a direct class like `.hero-title` is enough.
-- Keep element styling close to the class that owns the element.
 - Use nesting sparingly and only when it improves readability.
-- Do not rely on long descendant chains for normal section styling.
-
-### Preferred pattern
-- `.hero`
-- `.hero-title`
-- `.hero-lead-text`
-- `.hero-btn`
-
-### Less preferred pattern
-- `.hero .hero-title`
-- `.hero .hero-content .hero-title`
-- `.hero .hero-content .hero-actions .hero-btn`
-
-## BEM-Inspired Naming
-
-- Use a simplified, BEM-inspired naming style.
-- Keep naming understandable and consistent, but avoid heavy BEM ceremony.
-- Prefer names that behave like Bootstrap-style class names: clear, flat, and easy to scan.
-- Do not force strict BEM notation if a simpler project-specific name is clearer.
 
 ## Bootstrap Usage
 
@@ -72,8 +50,6 @@ When a Bootstrap class needs custom appearance, create a parallel project class 
 
 ## Combining Bootstrap and Project Styles
 
-It is fine to combine both systems on the same element.
-
 - Bootstrap class for base behavior
 - `y-` class for project-specific styling
 
@@ -81,42 +57,14 @@ Do not duplicate Bootstrap behavior with custom CSS unless the project specifica
 
 ## SCSS Structure
 
-The SCSS codebase is organized into a clear folder structure inside `src/styles/`.
+The SCSS codebase is organized into `src/styles/`:
 
-### Entry point
-- `styles/main.scss` is the main SCSS entry file.
-- It imports only folder-level `_index.scss` files.
-
-### Folder responsibilities
-
-#### `abstracts/`
-Configuration and SCSS helpers:
-- variables
-- functions
-- mixins
-
-These files must not emit page CSS directly.
-
-#### `vendors/`
-Third-party style integration layer:
-- Bootstrap import setup
-- Font Awesome import setup
-- vendor-specific configuration and overrides
-
-#### `base/`
-Global foundations:
-- reset
-- typography
-- page-level defaults
-
-#### `layout/`
-Major page sections and structural styles.
-
-#### `components/`
-Reusable UI pieces not tied to one specific page section.
-
-#### `pages/`
-Page-specific styles.
+- `abstracts/` — variables, functions, mixins
+- `vendors/` — Bootstrap and Font Awesome setup
+- `base/` — global foundations
+- `layout/` — page sections
+- `components/` — reusable UI parts
+- `pages/` — page-specific styles
 
 ## Variables
 
@@ -128,46 +76,40 @@ Use it for:
 - base font family
 - container widths
 - spacing and layout constants
-- reusable style values
 
 ## Bootstrap Overrides
 
 - Prefer configuration over ad-hoc overrides.
 - If Bootstrap variables need to change, do it in the SCSS configuration layer.
-- Keep the override strategy explicit and easy to find.
 - Do not patch Bootstrap styles directly in many places.
 
 ## Fonts
 
 - Load external web fonts intentionally.
 - Keep the base font family consistent with `_variables.scss`.
-- Treat font loading as part of the styling setup, not as a one-off hack.
 
 ## Icons
 
 - Use Font Awesome for icons.
 - Keep icon usage simple and consistent.
-- Use icons where they support usability or visual clarity.
 
 ## Responsive Design
 
 - Use Bootstrap grid and utilities first.
 - Add custom media queries only when needed.
 - Keep mobile-first thinking.
-- Make section-level styles responsive without overcomplicating the CSS.
 
 ## Maintainability
 
 - Keep section styles isolated.
 - Prefer one partial per major section or component group.
 - Avoid large monolithic SCSS files.
-- Make it easy to locate where a visual change belongs.
 
 ## HTML and Style Coordination
 
 - Use semantic HTML first.
 - Add project-specific classes only where styling or behavior needs them.
-- Keep HTML readable even when Bootstrap and `y-` classes are combined on one element.
+- Keep HTML readable when Bootstrap and `y-` classes are combined.
 - Avoid using HTML structure as the main styling mechanism when a dedicated class would be clearer.
 
 ## Notes for AI Assistants
@@ -176,4 +118,3 @@ Use it for:
 - Prefer flat, readable selectors.
 - Keep SCSS aligned with the folder-based architecture.
 - Respect the separation between Bootstrap base classes and custom project styles.
-- Prefer small, local changes over broad stylesheet edits.

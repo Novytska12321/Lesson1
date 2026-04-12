@@ -6,16 +6,16 @@ last-updated: 2026-04-12
 
 ## Overview
 
-This is a small static one-page landing page created as a learning project. The goal is to practice semantic HTML, SCSS, responsive layout work, Bootstrap usage, and a small amount of TypeScript for lightweight interactions.
+This is a small one-page landing page built as a learning project. It is meant for practicing semantic HTML, SCSS, Bootstrap, responsive layout work, and a small amount of TypeScript for lightweight interactions.
 
-The page presents a handcrafted Ukrainian embroidery theme with sections such as About us, Our collection, Customer order, and Testimonials.
+The page uses a handcrafted Ukrainian embroidery theme with sections such as About us, Our collection, Customer order, and Testimonials.
 
 ## Stack
 
 | Category | Technology | Purpose |
 |----------|------------|---------|
 | Build tool | Vite | Local development and production builds |
-| Language | TypeScript | Small UI behavior and build-time checks |
+| Language | TypeScript | Small UI behavior and build checks |
 | Markup | HTML | Semantic page structure |
 | Styling | SCSS | Project-specific layout and section styles |
 | UI framework | Bootstrap 5 | Grid, layout, typography, utilities, and components |
@@ -24,8 +24,6 @@ The page presents a handcrafted Ukrainian embroidery theme with sections such as
 | Deployment | GitHub Actions / GitHub Pages | Static deployment |
 
 ## Directory Structure
-
-The project is intentionally compact and centered around a single page.
 
 ```text
 Lesson1/
@@ -41,72 +39,59 @@ Lesson1/
     └── styles/
 ```
 
+
 ## File Roles
 
 ### `index.html`
-The main HTML document. It contains the page structure and external asset links.
+Main HTML document for the landing page.
 
 ### `src/main.ts`
-The TypeScript entry point. Keep it small and use it only to initialize feature scripts.
+TypeScript entry point. Keep it short and use it only to initialize feature scripts.
 
 ### `src/scripts/`
-Small UI behavior modules, for example:
-- mobile menu logic
-- smooth scrolling
-
-Each module should expose one clear initialization function.
+Small UI behavior modules, such as mobile menu or smooth scrolling.
 
 ### `src/styles/main.scss`
-The main SCSS entry file. It imports the folder-level style indexes.
+Main SCSS entry file. It imports folder-level style indexes.
 
 ### `src/styles/abstracts/`
-Configuration and helpers:
-- variables
-- functions
-- mixins
+Variables, functions, mixins, and other SCSS helpers.
 
 ### `src/styles/vendors/`
-Third-party style setup:
-- Bootstrap import/configuration
-- Font Awesome import/configuration
+Bootstrap and Font Awesome setup.
 
 ### `src/styles/base/`
-Global foundations:
-- reset
-- typography
-- page defaults
+Global foundations such as reset, typography, and page defaults.
 
 ### `src/styles/layout/`
-Major page sections and their structural styles.
+Major page sections and structural styles.
 
 ### `src/styles/components/`
-Reusable UI pieces not tied to one page section.
+Reusable UI pieces not tied to one section.
 
 ### `src/styles/pages/`
 Page-specific styles.
 
 ## Styling Approach
 
-- Use Bootstrap as much as possible for layout and common UI patterns.
-- Add custom project styles only when Bootstrap is not enough.
-- Prefix all project-specific classes with `y-`.
-- Prefer flat, readable selectors over deep nesting.
-- Use a simplified BEM-inspired style only when it improves clarity.
+- Use Bootstrap first for layout and common UI patterns.
+- Add custom styles only when needed.
+- Prefix project-specific classes with `y-`.
+- Prefer flat, readable selectors.
+- Keep naming clear and section-oriented.
 
 ## Responsive Design
 
 - Prefer Bootstrap grid and utilities first.
 - Add custom media queries only when needed.
 - Keep mobile-first thinking.
-- Keep section styles responsive without overcomplicating the CSS.
 
 ## TypeScript Usage
 
-TypeScript is used only for small interactions, such as:
+TypeScript is used only for small interactions such as:
+
 - opening and closing the mobile menu
 - smooth scrolling
-
-The project does not use a large client-side application architecture.
 
 ## Deployment
 
@@ -116,7 +101,6 @@ The repository includes a GitHub Actions workflow for static deployment to GitHu
 
 - Keep the project simple and educational.
 - Prefer semantic HTML.
-- Use Bootstrap first, then add custom `y-` classes only when needed.
 - Keep SCSS organized by responsibility.
 - Keep TypeScript focused on interactions.
 - Prefer readability over complexity.

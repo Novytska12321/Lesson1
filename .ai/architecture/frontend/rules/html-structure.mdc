@@ -23,8 +23,6 @@ Typical structure:
 - `section` blocks for main content
 - `footer`
 
-Each major content area should live in its own section with a clear heading and local structure.
-
 ## Headings
 
 - Use a logical heading hierarchy.
@@ -37,7 +35,6 @@ Each major content area should live in its own section with a clear heading and 
 - Use a semantic navigation container.
 - Keep links grouped and easy to identify.
 - For in-page navigation, keep anchors consistent with section ids.
-- Keep the markup simple enough for mobile navigation scripts to work without rewriting the structure.
 
 ## Section Markup
 
@@ -48,7 +45,6 @@ Each major content area should live in its own section with a clear heading and 
   - supporting text
   - image or visual block
   - call to action or form content
-- Use descriptive class names for section-specific wrappers and elements.
 
 ## Bootstrap Usage
 
@@ -75,14 +71,12 @@ Do not let Bootstrap classes replace semantic meaning.
 - Always provide meaningful `alt` text.
 - Use empty `alt=""` only for decorative images.
 - Keep image wrappers simple and local to the section.
-- Use responsive image helpers when needed.
 
 ## Forms
 
 - Keep forms semantic and minimal.
 - Use `label` elements when the form is intended for real user input.
 - Use Bootstrap form classes for standard input styling.
-- Keep form markup inside the section that owns the form.
 
 ## Links and Buttons
 
@@ -94,20 +88,17 @@ Do not let Bootstrap classes replace semantic meaning.
 
 - Keep footer markup simple and readable.
 - Use navigation links only if they truly belong in the footer.
-- Keep footer text and supporting elements logically grouped.
 
 ## Readability Rules
 
 - Prefer indentation and structure that make the document easy to skim.
 - Avoid unnecessary wrapper elements.
 - Do not use HTML nesting as a substitute for clear class naming.
-- Keep repeated patterns consistent across sections.
 
 ## Responsive Considerations
 
 - Keep the HTML understandable on both desktop and mobile layouts.
 - Do not bake responsive behavior into markup if CSS or JavaScript can handle it better.
-- Keep the document flexible for mobile navigation and responsive rearrangement.
 
 ## Notes for AI Assistants
 
@@ -115,4 +106,3 @@ Do not let Bootstrap classes replace semantic meaning.
 - Keep section names and heading levels consistent.
 - Prefer simple markup changes over structural rewrites.
 - Follow the existing section-based organization when adding content.
-- Keep the page easy to understand before styling is applied.
