@@ -1,23 +1,39 @@
 .y-order {
-  
-    form {
-      height: $order-form-height;
-      margin-bottom: $order-btn-gap;
+  background-image: url(../public/desctop-img/elements.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+  form {
+    height: $order-form-height;
+    margin-bottom: $order-btn-gap;
+  }
+
+  textarea.form-control {
+    height: 12.25rem; // 196px
+    resize: none;
+  }
+
+  .row {
+    align-items: stretch;
+  }
+
+  .col-6:first-child {
+    padding-left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
-    textarea.form-control {
-      height: 12.25rem; // 196px
-      resize: none;    
-    }
   }
-  .y-order-text{
-    font-size: $order-text-font-size;
-    margin-bottom: 2.5rem;
-  }
-  .y-order{
-    background-image: url(../public/desctop-img/elements.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-  }
-  .y-order-form{
-    max-width: 30rem;
-  }
+}
+
+.y-order-text {
+  font-size: $order-text-font-size;
+  margin-bottom: 2.5rem;
+}
+
+.y-order-form {
+  max-width: 30rem;
+}
