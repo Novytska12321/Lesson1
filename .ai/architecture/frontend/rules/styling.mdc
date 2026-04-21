@@ -59,7 +59,7 @@ Do not duplicate Bootstrap behavior with custom CSS unless the project specifica
 
 The SCSS codebase is organized into `src/styles/`:
 
-- `abstracts/` — variables, functions, mixins
+- `abstracts/` — tokens, functions, mixins
 - `vendors/` — Bootstrap and Font Awesome setup
 - `base/` — global foundations
 - `layout/` — page sections
@@ -68,7 +68,7 @@ The SCSS codebase is organized into `src/styles/`:
 
 ## Variables
 
-Keep shared styling values in `_variables.scss`.
+Keep my shared styling values in `_tokens.scss` and `_bootstrap-overrides.scss`.
 
 Use it for:
 - Bootstrap overrides
@@ -86,7 +86,7 @@ Use it for:
 ## Fonts
 
 - Load external web fonts intentionally.
-- Keep the base font family consistent with `_variables.scss`.
+- Keep the base font family consistent with `_bootstrap-overrides.scss`.
 
 ## Icons
 
