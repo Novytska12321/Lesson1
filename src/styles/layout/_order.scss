@@ -9,25 +9,21 @@
   margin-bottom: $order-btn-gap;
 }
 
-.y-order textarea.form-control {
+.y-order textarea {
   height: 12.25rem; // 196px
   resize: none;
 }
 
-.y-order .row {
-  align-items: stretch;
-}
 
-.y-order .col-6:first-child {
-  padding-left: 0;
-}
 
-.y-order .col-6:first-child img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+
+
+// .y-order .col-6:first-child img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   display: block;
+// }
 
 
 .y-order-text {
@@ -37,4 +33,23 @@
 
 .y-order-form {
   max-width: 30rem;
+};
+
+.y-order-gap {
+  width: 50px;
+}
+.y-order-img {
+  width: 524px;
+  height: 521px;
+  object-fit: cover;
+  display: block;
+  object-position: center center;
+
+  @include media-breakpoint-up(md) {
+    width: 588px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 521px;
+  }
 }
