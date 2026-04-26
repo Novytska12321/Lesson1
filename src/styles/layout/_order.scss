@@ -36,20 +36,20 @@
 };
 
 .y-order-gap {
-  width: 50px;
+  width: 3.125rem;
 }
 .y-order-img {
-  width: 524px;
-  height: 521px;
+  width: 32.75rem;
+  height: 32.5625rem;
   object-fit: cover;
   display: block;
   object-position: center center;
 
   @include media-breakpoint-up(md) {
-    width: 588px;
+    width: 36.75rem;
   }
 
   @include media-breakpoint-up(xxl) {
-    width: 521px;
+    width: 32.5625rem;
   }
 }
