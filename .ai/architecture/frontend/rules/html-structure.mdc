@@ -75,7 +75,6 @@ Do not let Bootstrap classes replace semantic meaning.
 ## Forms
 
 - Keep forms semantic and minimal.
-- Use `label` elements when the form is intended for real user input.
 - Use Bootstrap form classes for standard input styling.
 
 ## Links and Buttons
