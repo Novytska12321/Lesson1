@@ -174,13 +174,16 @@
             Personalized approach and quality of service</h2>
           <form class="y-order-form">
             <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Enter your full name">
+              <label class="form-label" for="order-full-name">Full name</label>
+              <input id="order-full-name" name="fullName" type="text" class="form-control" placeholder="Enter your full name" required>
             </div>
             <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Enter your email">
+              <label class="form-label" for="order-email">Email</label>
+              <input id="order-email" name="email" type="email" class="form-control" placeholder="Enter your email" required>
             </div>
             <div class="mb-3">
-              <textarea class="form-control" placeholder="Comments"></textarea>
+              <label class="form-label" for="order-comments">Comments</label>
+              <textarea id="order-comments" name="comments" class="form-control" placeholder="Comments"></textarea>
             </div>
             <button type="submit" class="btn y-btn y-btn-with-icon btn-outline-primary y-btn-outline-primary y-order-btn">
               Order
