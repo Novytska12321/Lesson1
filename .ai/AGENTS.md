@@ -29,4 +29,5 @@ This is a small one-page landing page created as a learning project. It presents
 - Start with this file to understand the purpose of the `.ai/` folder.
 - Treat `.ai/` as the canonical source of instructions.
 - Use the linked files above for deeper guidance instead of inferring project-specific conventions.
+- Mandatory Git workflow: for each new GitHub task/issue, create and work in a separate branch dedicated to that task (for example, task #1 -> `task-1`, task #2 -> `task-2`).
 - If symlinks are unavailable in your environment, use the closest available agent entry files and keep them aligned with the content in `.ai/`.
