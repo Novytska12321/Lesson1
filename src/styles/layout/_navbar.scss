@@ -1,14 +1,45 @@
 .y-navbar {
+  .y-navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
   .y-navbar-nav {
     flex-direction: row;
   }
+
   .y-navbar-btns {
     display: inline-flex;
+    align-items: center;
     gap: $spacer * 1.25; // 20px
+    margin-left: auto;
+    flex-shrink: 0;
   }
   .y-navbar-social-btns {
     display: inline-flex;
     gap: $spacer * 0.75; // 12px
+  }
+
+  @include media-breakpoint-down(lg) {
+    .navbar-brand {
+      margin-inline-end: 0;
+    }
+
+    .y-navbar-social-btns {
+      position: relative;
+      z-index: 1;
+    }
+
+    .y-navbar-menu-btn {
+      position: relative;
+      z-index: 0;
+    }
   }
   .y-nav-link {
     color: $navbar-nav-link-color;
