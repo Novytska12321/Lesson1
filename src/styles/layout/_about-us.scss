@@ -4,9 +4,43 @@
   background-image: url("/desctop-img/elements.png");
   background-repeat: no-repeat;
   background-position: right bottom;
+
+  @include media-breakpoint-only(md) {
+    background-size: 60% auto;
+    background-position: right bottom;
+  }
+
+  @include media-breakpoint-only(sm) {
+    background-size: 60% auto;
+    background-position: right bottom;
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-size: 60% auto;
+    background-position: right bottom;
+  }
 }
-.y-about-us-heading{
+
+.y-about-us-heading {
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: $spacer * 2.5;
+}
+
+.y-about-us-img-wrap {
+  position: relative;
+  z-index: 1;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: $spacer * 2.5;
+  }
+}
+
+.y-about-us-img {
+  @include media-breakpoint-down(lg) {
+    max-width: 44.3125rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
