@@ -3,6 +3,11 @@
     background-repeat: no-repeat;
     background-position: left 14rem;
     background-size: 20rem;
+
+    @include media-breakpoint-down(md) {
+        background-size: 8rem;
+        background-position: left 22rem;
+      }
 }
 .y-our-collection-heading {
     text-align: center;
@@ -29,4 +34,19 @@
     text-transform: uppercase;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+    .y-our-collection-heading {
+        font-size: 32px;
+        line-height: 1.375;
+    }
+
+    .y-our-collection-names {
+        font-size: 14px;
+    }
+
+    .y-our-collection-price {
+        font-size: 14px;
+    }
 }
