@@ -11,8 +11,12 @@
     @include media-breakpoint-up(xxl) {
         background-position: right -4rem bottom 0;
        }
-       
-    
+
+       @media (max-width: 576px) {
+        background-size: 110% auto;
+        background-position: right -2rem bottom;
+        padding-bottom: 110vw;
+    }
 }
 .y-footer-nav {
     font-size: $footer-nav-font-size;
