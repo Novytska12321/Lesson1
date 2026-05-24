@@ -3,6 +3,11 @@
     background-repeat: no-repeat;
     background-position: right -9rem bottom;
     background-size: auto 100%;
+
+    @include media-breakpoint-only(md) {
+      background-position: right -15rem bottom;
+    }
+
     @include media-breakpoint-up(xxl) {
         background-position: right -4rem bottom 0;
        }
@@ -24,9 +29,23 @@
         color: $secondary;
     }
 }
-.y-footer-text{
-font-size: $footer-text-font-size;
-line-height: 1.15625;
-letter-spacing: -0.03em;
-color: $footer-text-color;
+.y-footer-text {
+  font-size: $footer-text-font-size;
+  line-height: 1.15625;
+  letter-spacing: -0.03em;
+  color: $footer-text-color;
+
+  @include media-breakpoint-only(md) {
+    font-size: 54px;
+    line-height: 1.18519;
+
+    .y-footer-text-last-word {
+      display: block;
+    }
+  }
+
+  @media (max-width: 576px) {
+    font-size: 44px;
+    line-height: 1.22727;
+  }
 }
