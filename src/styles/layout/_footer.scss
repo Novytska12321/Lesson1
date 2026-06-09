@@ -4,7 +4,7 @@
     background-position: right -9rem bottom;
     background-size: auto 100%;
 
-    @include media-breakpoint-only(md) {
+    @include media-breakpoint-between(md, xl) {
       background-position: right -15rem bottom;
     }
 
@@ -12,7 +12,7 @@
         background-position: right -4rem bottom 0;
        }
 
-       @media (max-width: 576px) {
+       @include media-breakpoint-down(md) {
         background-size: 110% auto;
         background-position: right -2rem bottom;
         padding-bottom: 110vw;
@@ -23,7 +23,7 @@
     text-transform: uppercase;
     margin-bottom: $footer-nav-margin-bottom;
 
-    @media (max-width: 576px) {
+    @include media-breakpoint-down(md) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: $spacer;
@@ -57,7 +57,7 @@
     padding-left: $footer-nav-link-padding-y;
     padding-right: $footer-nav-link-padding-y;
 
-    @media (max-width: 576px) {
+    @include media-breakpoint-down(md) {
         padding-left: $spacer * 0.5;
         padding-right: $spacer * 0.5;
     }
@@ -72,7 +72,7 @@
   letter-spacing: -0.03em;
   color: $footer-text-color;
 
-  @include media-breakpoint-only(md) {
+  @include media-breakpoint-between(md, xl) {
     font-size: 54px;
     line-height: 1.18519;
 
@@ -81,7 +81,7 @@
     }
   }
 
-  @media (max-width: 576px) {
+  @include media-breakpoint-down(md) {
     font-size: 44px;
     line-height: 1.22727;
   }
