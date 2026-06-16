@@ -4,11 +4,11 @@
 }
 
 .y-hero-img {
-  @include media-breakpoint-only(md) {
+  @include media-breakpoint-only(tablet) {
     margin-top: 46px;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(tablet) {
     margin-top: 40px;
   }
 }
@@ -19,12 +19,12 @@
   line-height: 1.15625;
   letter-spacing: -0.03em;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(tablet) {
     font-size: 44px;
     line-height: 1.09091;
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(tablet) {
     @include font-size($hero-font-size-md);
   }
 
@@ -37,18 +37,18 @@
   width: 7rem;
   text-align: center;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(tablet) {
     display: none;
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(tablet) {
   .y-hero-handmade-col {
     display: none;
   }
 }
 
-@include media-breakpoint-only(md) {
+@include media-breakpoint-only(tablet) {
   .y-hero .row {
     align-items: flex-start;
   }
@@ -71,7 +71,7 @@
 .y-hero-btn {
   margin-left: 11.3125rem;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(tablet) {
     margin-left: 0;
     font-size: 14px;
     padding: 15px;

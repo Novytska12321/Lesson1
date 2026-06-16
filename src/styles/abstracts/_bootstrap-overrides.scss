@@ -13,7 +13,7 @@ $font-family-base: "Manrope", sans-serif; // Google Font
 
 $grid-breakpoints: (
   mobile: 0,
-  md: 768px,
+  tablet: 768px,
   lg: 992px,
   xl: 1280px,
   xxl: 1440px
@@ -21,7 +21,7 @@ $grid-breakpoints: (
 
 // Container
 $container-max-widths: (
-  md: 720px,
+  tablet: 720px,
   lg: 960px,
   xl: 1204px,
   xxl: 1264px
