@@ -99,7 +99,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@include media-breakpoint-down(md) {
   .y-order form {
     margin-bottom: 0;
   }

@@ -5,17 +5,7 @@
   background-repeat: no-repeat;
   background-position: right bottom;
 
-  @include media-breakpoint-only(md) {
-    background-size: 60% auto;
-    background-position: right bottom;
-  }
-
-  @include media-breakpoint-only(sm) {
-    background-size: 60% auto;
-    background-position: right bottom;
-  }
-
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     background-size: 60% auto;
     background-position: right bottom;
   }

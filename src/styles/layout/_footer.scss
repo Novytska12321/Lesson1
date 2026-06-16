@@ -12,10 +12,10 @@
         background-position: right -4rem bottom 0;
        }
 
-       @media (max-width: 576px) {
-        background-size: 110% auto;
-        background-position: right -2rem bottom;
-        padding-bottom: 110vw;
+    @include media-breakpoint-down(md) {
+      background-size: 110% auto;
+      background-position: right -2rem bottom;
+      padding-bottom: 110vw;
     }
 }
 .y-footer-nav {
@@ -23,7 +23,7 @@
     text-transform: uppercase;
     margin-bottom: $footer-nav-margin-bottom;
 
-    @media (max-width: 576px) {
+    @include media-breakpoint-down(md) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: $spacer;
@@ -57,7 +57,7 @@
     padding-left: $footer-nav-link-padding-y;
     padding-right: $footer-nav-link-padding-y;
 
-    @media (max-width: 576px) {
+    @include media-breakpoint-down(md) {
         padding-left: $spacer * 0.5;
         padding-right: $spacer * 0.5;
     }
@@ -81,7 +81,7 @@
     }
   }
 
-  @media (max-width: 576px) {
+  @include media-breakpoint-down(md) {
     font-size: 44px;
     line-height: 1.22727;
   }

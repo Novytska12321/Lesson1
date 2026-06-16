@@ -8,7 +8,7 @@
     margin-top: 46px;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     margin-top: 40px;
   }
 }
@@ -19,7 +19,7 @@
   line-height: 1.15625;
   letter-spacing: -0.03em;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     font-size: 44px;
     line-height: 1.09091;
   }
@@ -37,12 +37,12 @@
   width: 7rem;
   text-align: center;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     display: none;
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .y-hero-handmade-col {
     display: none;
   }
@@ -71,7 +71,7 @@
 .y-hero-btn {
   margin-left: 11.3125rem;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     margin-left: 0;
     font-size: 14px;
     padding: 15px;
