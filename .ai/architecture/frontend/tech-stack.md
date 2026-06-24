@@ -12,16 +12,16 @@ The page uses a handcrafted Ukrainian embroidery theme with sections such as Abo
 
 ## Stack
 
-| Category | Technology | Purpose |
-|----------|------------|---------|
-| Build tool | Vite | Local development and production builds |
-| Language | TypeScript | Small UI behavior and build checks |
-| Markup | HTML | Semantic page structure |
-| Styling | SCSS | Project-specific layout and section styles |
-| UI framework | Bootstrap 5 | Grid, layout, typography, utilities, and components |
-| Icon set | Font Awesome | Icons |
-| Fonts | Google Fonts | External typography |
-| Deployment | GitHub Actions / GitHub Pages | Static deployment |
+| Category     | Technology                    | Purpose                                             |
+| ------------ | ----------------------------- | --------------------------------------------------- |
+| Build tool   | Vite                          | Local development and production builds             |
+| Language     | TypeScript                    | Small UI behavior and build checks                  |
+| Markup       | HTML                          | Semantic page structure                             |
+| Styling      | SCSS                          | Project-specific layout and section styles          |
+| UI framework | Bootstrap 5                   | Grid, layout, typography, utilities, and components |
+| Icon set     | Font Awesome                  | Icons                                               |
+| Fonts        | Google Fonts                  | External typography                                 |
+| Deployment   | GitHub Actions / GitHub Pages | Static deployment                                   |
 
 ## Directory Structure
 
@@ -39,37 +39,46 @@ Lesson1/
     └── styles/
 ```
 
-
 ## File Roles
 
 ### `index.html`
+
 Main HTML document for the landing page.
 
 ### `src/main.ts`
+
 TypeScript entry point. Keep it short and use it only to initialize feature scripts.
 
 ### `src/scripts/`
+
 Small UI behavior modules, such as mobile menu or smooth scrolling.
 
 ### `src/styles/main.scss`
+
 Main SCSS entry file. It imports folder-level style indexes.
 
 ### `src/styles/abstracts/`
+
 Variables, functions, mixins, and other SCSS helpers.
 
 ### `src/styles/vendors/`
+
 Bootstrap and Font Awesome setup.
 
 ### `src/styles/base/`
+
 Global foundations such as reset, typography, and page defaults.
 
 ### `src/styles/layout/`
+
 Major page sections and structural styles.
 
 ### `src/styles/components/`
+
 Reusable UI pieces not tied to one section.
 
 ### `src/styles/pages/`
+
 Page-specific styles.
 
 ## Styling Approach
