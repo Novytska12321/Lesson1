@@ -1,5 +1,5 @@
 .y-our-collection {
-  background-image: url(/desctop-img/elements-yellow.png);
+  background-image: url("/desctop-img/elements-yellow.png");
   background-repeat: no-repeat;
   background-position: left 14rem;
   background-size: 20rem;
@@ -9,6 +9,7 @@
     background-position: left 22rem;
   }
 }
+
 .y-our-collection-heading {
   text-align: center;
   margin-top: $spacer * 4.5;
@@ -26,6 +27,7 @@
   object-fit: cover;
   display: block;
 }
+
 .y-our-collection-names {
   font-size: $our-collection-font-size;
   font-weight: $our-collection-font-weight;

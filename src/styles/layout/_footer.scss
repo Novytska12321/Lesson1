@@ -1,5 +1,5 @@
 .y-footer {
-  background-image: url(/desctop-img/elements-yellow.png);
+  background-image: url("/desctop-img/elements-yellow.png");
   background-repeat: no-repeat;
   background-position: right -9rem bottom;
   background-size: auto 100%;
@@ -18,6 +18,7 @@
     padding-bottom: 110vw;
   }
 }
+
 .y-footer-nav {
   font-size: $footer-nav-font-size;
   text-transform: uppercase;
@@ -66,15 +67,16 @@
     color: $secondary;
   }
 }
+
 .y-footer-text {
   font-size: $footer-text-font-size;
-  line-height: 1.15625;
+  line-height: 1.1563;
   letter-spacing: -0.03em;
   color: $footer-text-color;
 
   @include media-breakpoint-only(tablet) {
     font-size: 54px;
-    line-height: 1.18519;
+    line-height: 1.1852;
 
     .y-footer-text-last-word {
       display: block;
@@ -83,6 +85,6 @@
 
   @include media-breakpoint-down(tablet) {
     font-size: 44px;
-    line-height: 1.22727;
+    line-height: 1.2273;
   }
 }

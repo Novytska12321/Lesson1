@@ -1,6 +1,6 @@
 .y-order {
   @include media-breakpoint-up(tablet) {
-    background-image: url(/desctop-img/elements.png);
+    background-image: url("/desctop-img/elements.png");
     background-repeat: no-repeat;
     background-position: left bottom;
   }

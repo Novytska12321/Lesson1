@@ -1,11 +1,11 @@
 $line-height-base: 1.5;
 $body-bg: #1c2225;
-$body-color: rgba(252, 249, 249, 0.4);
+$body-color: rgb(252 249 249 / 40%);
 $primary: #fcf9f9;
 $secondary: #ecd979;
 $spacer: 1rem;
 $headings-color: $primary;
-$border-color: rgba(252, 249, 249, 0.1);
+$border-color: rgb(252 249 249 / 10%);
 
 // Font
 $font-size-base: 1rem; // 16px
@@ -31,7 +31,7 @@ $navbar-padding-y: 1.1875rem;
 $navbar-nav-link-font-size: $font-size-base * 0.875; // 14px
 $navbar-nav-link-color: $primary;
 $navbar-nav-link-font-weight: 400;
-$navbar-nav-link-line-height: 1.28571;
+$navbar-nav-link-line-height: 1.2857;
 $navbar-nav-link-padding-y: 0.75rem;
 
 // Buttons (Bootstrap component variables)
