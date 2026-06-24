@@ -75,6 +75,14 @@ This file contains practical recipes for working on the landing page project.
 - Use nesting sparingly.
 - Keep each file focused on one responsibility.
 
+## Verify SCSS with Stylelint
+
+After any SCSS change:
+
+1. Run `npm run lint:css`.
+2. Fix all violations reported by `stylelint-config-standard-scss` (see `.stylelintrc.json`).
+3. Re-run the command until it passes with no errors.
+
 ## Checklist Before You Edit
 
 - Is the change layout, component, base, or page-specific?
@@ -83,3 +91,4 @@ This file contains practical recipes for working on the landing page project.
 - Should this live in `abstracts/`, `vendors/`, `base/`, `layout/`, `components/`, or `pages/`?
 - Can the script stay in `src/scripts/` and be initialized from `main.ts`?
 - Will the result stay simple enough for a learning project?
+- After editing SCSS, did you run `npm run lint:css` and fix all Stylelint issues?

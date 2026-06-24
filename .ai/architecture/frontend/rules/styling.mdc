@@ -112,9 +112,28 @@ Use it for:
 - Keep HTML readable when Bootstrap and `y-` classes are combined.
 - Avoid using HTML structure as the main styling mechanism when a dedicated class would be clearer.
 
+## Stylelint Verification
+
+This project enforces SCSS style through [stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss).
+
+- Configuration: `.stylelintrc.json` extends `stylelint-config-standard-scss`.
+- Command: `npm run lint:css` (lints `src/styles/**/*.scss`).
+- CI runs the same check on every push and pull request.
+
+### Mandatory for AI Assistants
+
+After creating or editing any SCSS file:
+
+1. Run `npm run lint:css`.
+2. Fix every reported violation before finishing the task.
+3. Write SCSS that already conforms to `stylelint-config-standard-scss` rules (property order, nesting limits, standard SCSS syntax, and other defaults from the config).
+
+Do not skip this step, even for small style changes.
+
 ## Notes for AI Assistants
 
 - Follow the `y-` prefix convention for all project-specific classes.
 - Prefer flat, readable selectors.
 - Keep SCSS aligned with the folder-based architecture.
 - Respect the separation between Bootstrap base classes and custom project styles.
+- Always run `npm run lint:css` after SCSS changes and resolve all Stylelint errors.
