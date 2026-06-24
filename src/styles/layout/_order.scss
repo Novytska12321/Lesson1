@@ -13,11 +13,11 @@
 .y-order form {
   margin-bottom: $order-btn-gap;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(desktop) {
     height: $order-form-height;
   }
 
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(desktop) {
     height: auto;
   }
 
@@ -51,7 +51,7 @@
 }
 
 .y-order-layout {
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(desktop) {
     flex-direction: column;
   }
 
@@ -72,7 +72,7 @@
 .y-order-gap {
   width: 3.125rem;
 
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(desktop) {
     display: none;
   }
 }

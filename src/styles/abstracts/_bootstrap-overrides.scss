@@ -14,16 +14,14 @@ $font-family-base: "Manrope", sans-serif; // Google Font
 $grid-breakpoints: (
   mobile: 0,
   tablet: 768px,
-  lg: 992px,
-  xl: 1280px,
+  desktop: 1280px,
   xxl: 1440px
 );
 
 // Container
 $container-max-widths: (
   tablet: 720px,
-  lg: 960px,
-  xl: 1204px,
+  desktop: 1204px,
   xxl: 1264px
 );
 
