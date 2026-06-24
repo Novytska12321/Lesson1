@@ -1,4 +1,7 @@
 .y-navbar {
+  position: relative;
+  z-index: 999;
+
   .y-navbar-container {
     display: flex;
     align-items: center;
@@ -33,12 +36,18 @@
 
     .y-navbar-social-btns {
       position: relative;
-      z-index: 1;
+      z-index: 1001;
     }
 
     .y-navbar-menu-btn {
       position: relative;
-      z-index: 0;
+      z-index: 1001;
+      margin-left: $spacer * 0.75;
+      background-color: transparent;
+    }
+
+    .y-navbar-menu-icon--close {
+      display: block;
     }
   }
   .y-nav-link {
@@ -53,5 +62,124 @@
     &:hover {
       color: $secondary;
   }
+  }
+}
+
+.y-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: $spacer * 1.5625;
+  padding: $spacer * 5 $spacer * 2 $spacer * 18;
+  background-color: $secondary;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35%;
+    background-image: url(/desctop-img/elements.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    opacity: 0.75;
+    pointer-events: none;
+  }
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    padding-right: $spacer * 14;
+    padding-bottom: $spacer * 20;
+    
+    &::before {
+      height: 40%;
+    }
+  }
+}
+
+.y-mobile-menu-header {
+  position: absolute;
+  top: $spacer * 1.25;
+  left: $spacer * 2;
+  right: $spacer * 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacer * 4.9375;
+
+  @include media-breakpoint-up(tablet) {
+    left: $spacer * 3.125;
+    right: $spacer * 3.125;
+  }
+}
+
+.y-mobile-menu-close-btn {
+  flex-shrink: 0;
+  
+  img {
+    display: block;
+  }
+}
+
+.y-mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: $spacer * 1.5625;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.y-mobile-menu-link {
+  color: $body-bg;
+  font-size: $font-size-base * 0.875;
+  font-weight: 400;
+  line-height: 1.28571;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0;
+
+  &:hover,
+  &:focus-visible {
+    color: rgba($body-bg, 0.7);
+  }
+}
+
+.y-mobile-menu-phone {
+  color: $body-bg;
+  border-color: rgba($body-bg, 0.1);
+  white-space: nowrap;
+
+  &:hover,
+  &:focus-visible {
+    color: $body-bg;
+    background-color: rgba($body-bg, 0.05);
+    border-color: rgba($body-bg, 0.2);
+  }
+}
+
+
+body.y-mobile-menu-open {
+  overflow: hidden;
+
+  .y-navbar-social-btns {
+    visibility: hidden;
   }
 }

@@ -46,12 +46,41 @@
           <a class="btn btn-outline-primary y-btn-outline-primary y-btn-outline-primary-social" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
               class="fa-brands fa-youtube" aria-hidden="true"></i></a>
         </span>
-        <button type="button" class="btn p-0 border-0 d-desktop-none y-navbar-menu-btn" aria-label="Menu">
-          <img src="/tablet-img/Nav.svg" alt="" width="44" height="30" />
+        <button type="button" class="btn p-0 border-0 d-desktop-none y-navbar-menu-btn" aria-label="Open menu"
+          aria-expanded="false" aria-controls="mobile-menu">
+          <img class="y-navbar-menu-icon y-navbar-menu-icon--open" src="/tablet-img/Nav.svg" alt="" width="44"
+            height="30" />
+          <img class="y-navbar-menu-icon y-navbar-menu-icon--close" src="/tablet-img/Nav-close.svg" alt="" width="44"
+            height="30" hidden />
         </button>
       </div>
     </div>
   </header>
+
+  <div class="y-mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="y-mobile-menu-header">
+      <a class="btn btn-outline-primary y-btn-outline-primary y-mobile-menu-phone" href="tel:+380684439426">+380 (68) 443-94-26</a>
+      <button type="button" class="btn p-0 border-0 y-mobile-menu-close-btn" aria-label="Close menu">
+        <img src="/tablet-img/Nav-close-dark.svg" alt="" width="44" height="44" />
+      </button>
+    </div>
+    <nav>
+      <ul class="y-mobile-menu-nav">
+        <li>
+          <a class="y-mobile-menu-link" href="#about-us">About us</a>
+        </li>
+        <li>
+          <a class="y-mobile-menu-link" href="#our-collection">Our collection</a>
+        </li>
+        <li>
+          <a class="y-mobile-menu-link" href="#order">CUSTOMER ORDER</a>
+        </li>
+        <li>
+          <a class="y-mobile-menu-link" href="#testimonials">Testimonials</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <!-- space / gap / margin -->
   <section class="y-hero">
     <div class="container">
