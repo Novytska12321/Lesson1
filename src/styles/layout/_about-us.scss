@@ -21,13 +21,13 @@
   position: relative;
   z-index: 1;
 
-  @include media-breakpoint-down(desktop) {
+  @include media-breakpoint-down(laptop) {
     margin-top: $spacer * 2.5;
   }
 }
 
 .y-about-us-img {
-  @include media-breakpoint-down(desktop) {
+  @include media-breakpoint-down(laptop) {
     max-width: 44.3125rem;
     width: 100%;
     margin-left: auto;

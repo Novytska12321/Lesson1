@@ -8,7 +8,7 @@
     background-position: right -15rem bottom;
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(desktop) {
     background-position: right -4rem bottom 0;
   }
 

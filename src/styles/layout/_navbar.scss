@@ -30,7 +30,7 @@
     gap: $spacer * 0.75; // 12px
   }
 
-  @include media-breakpoint-down(desktop) {
+  @include media-breakpoint-down(laptop) {
     .navbar-brand {
       margin-inline-end: 0;
     }

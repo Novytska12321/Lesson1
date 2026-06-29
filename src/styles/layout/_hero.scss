@@ -28,8 +28,8 @@
     @include font-size($hero-font-size-md);
   }
 
-  @include media-breakpoint-up(xxl) {
-    @include font-size($hero-font-size-xxl);
+  @include media-breakpoint-up(desktop) {
+    @include font-size($hero-font-size-desktop);
   }
 }
 
