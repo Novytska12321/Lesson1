@@ -8,17 +8,12 @@ export function initMobileMenu(): void {
     return;
   }
 
-  const openIcon = menuBtn.querySelector<HTMLImageElement>(".y-navbar-menu-icon--open");
-  const closeIcon = menuBtn.querySelector<HTMLImageElement>(".y-navbar-menu-icon--close");
-
   const setMenuOpen = (isOpen: boolean): void => {
     menu.classList.toggle("is-open", isOpen);
     menu.setAttribute("aria-hidden", String(!isOpen));
     menuBtn.setAttribute("aria-expanded", String(isOpen));
     menuBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     document.body.classList.toggle("y-mobile-menu-open", isOpen);
-    openIcon?.toggleAttribute("hidden", isOpen);
-    closeIcon?.toggleAttribute("hidden", !isOpen);
   };
 
   menuBtn.addEventListener("click", () => {
