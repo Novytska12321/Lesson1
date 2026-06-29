@@ -1,32 +1,11 @@
 .y-navbar {
-  position: relative;
   z-index: 999;
 
-  .y-navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  h1 {
-    margin: 0;
-  }
-
-  .y-navbar-nav {
-    flex-direction: row;
-  }
-
   .y-navbar-btns {
-    display: inline-flex;
-    align-items: center;
     gap: $spacer * 1.25; // 20px
-    margin-left: auto;
-    flex-shrink: 0;
   }
 
   .y-navbar-social-btns {
-    display: inline-flex;
     gap: $spacer * 0.75; // 12px
   }
 
@@ -35,20 +14,9 @@
       margin-inline-end: 0;
     }
 
-    .y-navbar-social-btns {
-      position: relative;
-      z-index: 1001;
-    }
-
+    .y-navbar-social-btns,
     .y-navbar-menu-btn {
-      position: relative;
       z-index: 1001;
-      margin-left: $spacer * 0.75;
-      background-color: transparent;
-    }
-
-    .y-navbar-menu-icon--close {
-      display: block;
     }
   }
 
@@ -71,10 +39,6 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
   gap: $spacer * 1.5625;
   padding: $spacer * 5 $spacer * 2 $spacer * 18;
   background-color: $secondary;
@@ -122,9 +86,6 @@
   top: $spacer * 1.25;
   left: $spacer * 2;
   right: $spacer * 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: $spacer * 4.9375;
 
   @include media-breakpoint-up(tablet) {
@@ -133,22 +94,8 @@
   }
 }
 
-.y-mobile-menu-close-btn {
-  flex-shrink: 0;
-
-  img {
-    display: block;
-  }
-}
-
 .y-mobile-menu-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   gap: $spacer * 1.5625;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .y-mobile-menu-link {

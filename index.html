@@ -13,14 +13,14 @@
   </head>
 
   <body>
-    <header class="navbar y-navbar">
-      <div class="container y-navbar-container">
+    <header class="navbar y-navbar position-relative">
+      <div class="container d-flex align-items-center justify-content-between w-100">
         <div class="d-flex align-items-center">
-          <h1>
+          <h1 class="m-0">
             <img class="navbar-brand" src="/desctop-img/logo.svg" alt="Vyshyvanka Vibes logo" />
           </h1>
           <nav class="d-none d-desktop-flex">
-            <ul class="navbar-nav me-auto y-navbar-nav">
+            <ul class="navbar-nav me-auto">
               <li class="nav-item">
                 <a class="nav-link y-nav-link" href="#about-us">About us</a>
               </li>
@@ -37,13 +37,13 @@
           </nav>
         </div>
 
-        <div class="y-navbar-btns">
+        <div class="y-navbar-btns d-inline-flex align-items-center ms-auto flex-shrink-0">
           <a
             class="btn btn-outline-primary y-btn-outline-primary d-none d-desktop-block"
             href="tel:+380684439426"
             >+380 (68) 443-94-26</a
           >
-          <span class="y-navbar-social-btns">
+          <span class="y-navbar-social-btns d-inline-flex position-relative">
             <a
               class="btn btn-outline-primary y-btn-outline-primary y-btn-outline-primary-social"
               href="https://www.facebook.com/"
@@ -71,7 +71,7 @@
           </span>
           <button
             type="button"
-            class="btn p-0 border-0 d-desktop-none y-navbar-menu-btn"
+            class="btn p-0 border-0 bg-transparent d-desktop-none y-navbar-menu-btn position-relative ms-3"
             aria-label="Open menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
@@ -84,7 +84,7 @@
               height="30"
             />
             <img
-              class="y-navbar-menu-icon y-navbar-menu-icon--close"
+              class="y-navbar-menu-icon y-navbar-menu-icon--close d-block"
               src="/tablet-img/Nav-close.svg"
               alt=""
               width="44"
@@ -96,8 +96,12 @@
       </div>
     </header>
 
-    <div class="y-mobile-menu" id="mobile-menu" aria-hidden="true">
-      <div class="y-mobile-menu-header">
+    <div
+      class="y-mobile-menu d-flex flex-column align-items-end justify-content-center"
+      id="mobile-menu"
+      aria-hidden="true"
+    >
+      <div class="y-mobile-menu-header d-flex align-items-center justify-content-between">
         <a
           class="btn btn-outline-primary y-btn-outline-primary y-mobile-menu-phone"
           href="tel:+380684439426"
@@ -105,14 +109,14 @@
         >
         <button
           type="button"
-          class="btn p-0 border-0 y-mobile-menu-close-btn"
+          class="btn p-0 border-0 y-mobile-menu-close-btn flex-shrink-0"
           aria-label="Close menu"
         >
-          <img src="/tablet-img/Nav-close-dark.svg" alt="" width="44" height="44" />
+          <img class="d-block" src="/tablet-img/Nav-close-dark.svg" alt="" width="44" height="44" />
         </button>
       </div>
       <nav>
-        <ul class="y-mobile-menu-nav">
+        <ul class="y-mobile-menu-nav d-flex flex-column align-items-end list-unstyled m-0 p-0">
           <li>
             <a class="y-mobile-menu-link" href="#about-us">About us</a>
           </li>
