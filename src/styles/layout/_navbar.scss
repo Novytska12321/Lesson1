@@ -33,6 +33,13 @@
       color: $secondary;
     }
   }
+
+  @include media-breakpoint-up(desktop) {
+    .navbar-nav {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
 }
 
 .y-mobile-menu {
