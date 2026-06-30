@@ -20,6 +20,20 @@
     }
   }
 
+  .y-navbar-menu-btn {
+    width: 2.75rem;
+    height: 2.75rem;
+    line-height: 1;
+  }
+
+  .y-navbar-menu-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+  }
+
   .y-nav-link {
     color: $navbar-nav-link-color;
     font-weight: $navbar-nav-link-font-weight;
@@ -91,13 +105,30 @@
 .y-mobile-menu-header {
   position: absolute;
   top: $spacer * 1.25;
-  left: $spacer * 2;
-  right: $spacer * 2;
+  left: $spacer * 0.75;
+  right: $spacer * 0.75;
   gap: $spacer * 4.9375;
 
   @include media-breakpoint-up(tablet) {
-    left: $spacer * 3.125;
-    right: $spacer * 3.125;
+    left: calc((100vw - 45rem) / 2 + 0.75rem);
+    right: calc((100vw - 45rem) / 2 + 0.75rem);
+  }
+}
+
+.y-mobile-menu-close-btn {
+  position: relative;
+  z-index: 1002;
+  width: 2.75rem;
+  height: 2.75rem;
+  line-height: 1;
+  background-color: transparent;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
   }
 }
 
