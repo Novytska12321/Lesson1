@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-04-12
+last-updated: 2026-07-05
 ---
 
 # Frontend Tech Stack & Directory Structure
@@ -17,8 +17,8 @@ The page uses a handcrafted Ukrainian embroidery theme with sections such as Abo
 | Build tool   | Vite                          | Local development and production builds             |
 | Language     | TypeScript                    | Small UI behavior and build checks                  |
 | Markup       | HTML                          | Semantic page structure                             |
-| Styling      | SCSS                          | Project-specific layout and section styles          |
-| UI framework | Bootstrap 5                   | Grid, layout, typography, utilities, and components |
+| UI framework | Bootstrap 5                   | **Primary styling layer** — grid, layout, typography, utilities, and components (use first in HTML) |
+| Styling      | SCSS                          | **Fallback only** — project-specific styles when Bootstrap is not enough |
 | Icon set     | Font Awesome                  | Icons                                               |
 | Fonts        | Google Fonts                  | External typography                                 |
 | Deployment   | GitHub Actions / GitHub Pages | Static deployment                                   |
@@ -83,8 +83,14 @@ Page-specific styles.
 
 ## Styling Approach
 
-- Use Bootstrap first for layout and common UI patterns.
-- Add custom styles only when needed.
+**Bootstrap first, SCSS last.** This order is mandatory for AI assistants and contributors.
+
+1. Apply Bootstrap classes in HTML for layout, spacing, flex, typography, and components.
+2. Write custom SCSS only when Bootstrap genuinely cannot achieve the required design.
+3. Never duplicate Bootstrap utilities or component behavior in SCSS.
+
+Additional conventions:
+
 - Prefix project-specific classes with `y-`.
 - Prefer flat, readable selectors.
 - Keep naming clear and section-oriented.

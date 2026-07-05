@@ -1,5 +1,5 @@
 ---
-description: Styling rules for SCSS architecture, Bootstrap usage, custom class naming, and visual consistency in the landing page project
+description: Bootstrap-first styling rules — use Bootstrap classes in HTML before SCSS; SCSS architecture, custom class naming, and visual consistency for the landing page project
 globs:
   - "**/*.scss"
   - "**/*.html"
@@ -7,10 +7,26 @@ globs:
 
 # Styling Rules
 
+## Styling Priority: Bootstrap First, SCSS Last
+
+This is the most important styling rule for AI assistants.
+
+When styling any element, section, or layout:
+
+1. **First — Bootstrap classes in HTML.** Use Bootstrap grid, utilities, components, and helpers directly in markup: `container`, `row`, `col-*`, `d-flex`, `align-items-*`, `justify-content-*`, `gap-*`, spacing utilities (`m-*`, `p-*`, `mb-*`), typography, buttons, navbar, forms, and other built-in classes.
+2. **Only when Bootstrap cannot achieve the design — custom SCSS.** Add a `y-` prefixed class and write SCSS only for project-specific appearance that Bootstrap does not provide: brand colors, decorative backgrounds, unique section visuals, or behavior Bootstrap lacks.
+3. **Never write SCSS for what Bootstrap already offers.** Do not recreate spacing, flex alignment, grid columns, typography scale, or component behavior in SCSS if Bootstrap utilities or components cover it.
+
+### Decision checklist before writing SCSS
+
+- Is there a Bootstrap utility or component that does this? → Use it in HTML; do not add SCSS.
+- Does the design need project-specific tokens (colors, fonts, decorative backgrounds)? → Add a `y-` class with minimal SCSS.
+- Does Bootstrap need global theming? → Change variables in `_bootstrap-overrides.scss`, not scattered one-off overrides.
+
 ## Core Principles
 
-- Use Bootstrap as the primary styling and layout foundation.
-- Add custom SCSS only when Bootstrap does not cover the required design or behavior.
+- Bootstrap classes in HTML are the default styling tool.
+- Custom SCSS is the exception, not the starting point.
 - Keep the project readable and easy to maintain.
 - Prefer simple, flat, section-oriented styling over deeply nested selector chains.
 
@@ -40,13 +56,17 @@ globs:
 
 ## Bootstrap Usage
 
+Bootstrap is the first and preferred styling layer. Always check Bootstrap before opening an SCSS file.
+
 Use Bootstrap classes whenever they fit the design:
 - layout: `container`, `row`, `col-*`
+- flex and alignment: `d-flex`, `align-items-*`, `justify-content-*`, `gap-*`
+- spacing: `m-*`, `p-*`, `mb-*`, `mt-*`, and related utilities
 - typography and reboot classes
-- buttons, navbar, navs
-- helpers and utilities
+- buttons, navbar, navs, forms
+- helpers and utilities: `text-center`, `w-100`, `img-fluid`, and similar
 
-When a Bootstrap class needs custom appearance, create a parallel project class with the `y-` prefix instead of modifying Bootstrap itself.
+When a Bootstrap class needs custom appearance, create a parallel project class with the `y-` prefix instead of modifying Bootstrap itself. Do not skip Bootstrap utilities and jump straight to SCSS.
 
 ## Combining Bootstrap and Project Styles
 
@@ -132,6 +152,7 @@ Do not skip this step, even for small style changes.
 
 ## Notes for AI Assistants
 
+- **Bootstrap first, SCSS only when Bootstrap is not enough.** Exhaust Bootstrap options in HTML before creating or editing SCSS.
 - Follow the `y-` prefix convention for all project-specific classes.
 - Prefer flat, readable selectors.
 - Keep SCSS aligned with the folder-based architecture.

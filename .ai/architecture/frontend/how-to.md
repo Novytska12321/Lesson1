@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-04-12
+last-updated: 2026-07-05
 ---
 
 # Frontend How-To Recipes
@@ -9,17 +9,18 @@ This file contains practical recipes for working on the landing page project.
 ## Add a New Page Section
 
 1. Add semantic HTML in `index.html`.
-2. Create a matching SCSS partial in `src/styles/layout/`.
-3. Add a `y-` class if custom styling is needed.
-4. Import the partial from `src/styles/layout/_index.scss`.
+2. **Style with Bootstrap classes first** — grid, spacing, flex, typography, and other utilities/components in markup.
+3. Only if Bootstrap cannot cover the design: create a matching SCSS partial in `src/styles/layout/`, add a `y-` class, and import the partial from `src/styles/layout/_index.scss`.
+4. Do not create an SCSS partial for layout or spacing that Bootstrap already handles.
 
 ## Add or Update a Styled UI Element
 
-1. Check whether the element belongs in `src/styles/components/`.
-2. Add or update the component partial.
-3. Use the `y-` prefix for project-specific classes.
-4. Keep selectors flat.
-5. Import the partial from `src/styles/components/_index.scss`.
+1. **Check Bootstrap first** — can utilities, components, or helpers achieve the result in HTML alone?
+2. If yes, use Bootstrap in markup and stop; do not add SCSS.
+3. If no, check whether the element belongs in `src/styles/components/`.
+4. Add or update the component partial with a `y-` prefixed class.
+5. Keep selectors flat.
+6. Import the partial from `src/styles/components/_index.scss`.
 
 ## Add a Small UI Behavior Script
 
@@ -69,8 +70,9 @@ This file contains practical recipes for working on the landing page project.
 ## General Editing Rules
 
 - Prefer semantic HTML first.
-- Prefer Bootstrap first for layout and common UI patterns.
-- Use project-specific classes only when custom styling is needed.
+- **Bootstrap classes first for all styling** — layout, spacing, flex, typography, components, and utilities in HTML.
+- **SCSS only when Bootstrap is not enough** — use `y-` classes for project-specific visuals Bootstrap cannot provide.
+- Do not write SCSS to duplicate Bootstrap behavior.
 - Keep selectors flat and readable.
 - Use nesting sparingly.
 - Keep each file focused on one responsibility.
@@ -86,8 +88,8 @@ After any SCSS change:
 ## Checklist Before You Edit
 
 - Is the change layout, component, base, or page-specific?
-- Can Bootstrap already solve part of the problem?
-- Does the custom style need a `y-` class?
+- **Can Bootstrap alone solve this?** If yes, use Bootstrap in HTML and skip SCSS.
+- If Bootstrap is not enough, does the custom style need a `y-` class?
 - Should this live in `abstracts/`, `vendors/`, `base/`, `layout/`, `components/`, or `pages/`?
 - Can the script stay in `src/scripts/` and be initialized from `main.ts`?
 - Will the result stay simple enough for a learning project?
