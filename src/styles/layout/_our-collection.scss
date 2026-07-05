@@ -4,6 +4,11 @@
   background-position: left 14rem;
   background-size: 20rem;
 
+  .container {
+    --bs-gutter-x: 3rem;
+    --bs-gutter-y: 1.5rem;
+  }
+
   @include media-breakpoint-down(tablet) {
     background-size: 8rem;
     background-position: left 22rem;

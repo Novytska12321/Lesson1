@@ -110,8 +110,8 @@
   gap: $spacer * 4.9375;
 
   @include media-breakpoint-up(tablet) {
-    left: calc((100vw - 45rem) / 2 + 0.75rem);
-    right: calc((100vw - 45rem) / 2 + 0.75rem);
+    left: calc((100% - 45rem) / 2 + 0.75rem);
+    right: calc((100% - 45rem) / 2 + 0.75rem);
   }
 }
 
