@@ -1,11 +1,19 @@
 .y-big-img {
-  padding-top: 9.375rem;
-  padding-bottom: 9.375rem;
+  overflow-x: clip;
 
   .y-big-img-image {
+    display: block;
     width: 100%;
-    margin: 0;
-    height: 48.5rem;
+    max-width: 100%;
+    margin-inline: auto;
+    height: auto;
     object-fit: cover;
+    object-position: center;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    .y-big-img-image {
+      height: 48.5rem;
+    }
   }
 }

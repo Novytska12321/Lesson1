@@ -1,14 +1,6 @@
 .y-navbar {
   z-index: calc($zindex-dropdown - 1);
 
-  .y-navbar-btns {
-    gap: $spacer * 1.25; // 20px
-  }
-
-  .y-navbar-social-btns {
-    gap: $spacer * 0.75; // 12px
-  }
-
   @include media-breakpoint-down(desktop) {
     .navbar-brand {
       margin-inline-end: 0;
@@ -31,20 +23,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  .y-nav-link {
-    color: $navbar-nav-link-color;
-    font-weight: $navbar-nav-link-font-weight;
-    font-size: $navbar-nav-link-font-size;
-    line-height: $navbar-nav-link-line-height;
-    text-transform: uppercase;
-    padding-left: $navbar-nav-link-padding-y;
-    padding-right: $navbar-nav-link-padding-y;
-
-    &:hover {
-      color: $secondary;
-    }
   }
 }
 
@@ -123,18 +101,8 @@
   }
 }
 
-.y-mobile-menu-nav {
-  gap: $spacer * 1.5625;
-}
-
 .y-mobile-menu-link {
   color: $body-bg;
-  font-size: $font-size-base * 0.875;
-  font-weight: 400;
-  line-height: 1.2857;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0;
 
   &:hover,
   &:focus-visible {

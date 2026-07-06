@@ -1,16 +1,5 @@
-.y-testimonials {
-  padding-top: $spacer * 9;
-  padding-bottom: $spacer * 9;
-}
-
-.y-testimonials-heading {
-  margin-bottom: $spacer * 4.5;
-}
-
 .y-testimonials-item {
-  padding: 0 $spacer * 1.125 $spacer * 1.125;
   overflow: visible;
-  height: 100%;
 }
 
 .y-testimonials-item-img {
@@ -28,15 +17,8 @@
   font-size: $spacer * 1.25;
 }
 
-.y-testimonials-item-quote {
-  text-align: center;
-  margin-bottom: 0;
-}
-
 .y-testimonials-carousel-viewport {
-  overflow: hidden;
-  width: 100%;
-  padding-top: 2rem;
+  // Layout utilities moved to Bootstrap classes in markup.
 }
 
 .y-testimonials-carousel-track {
@@ -49,12 +31,6 @@
   width: 100%;
   min-width: 100%;
   box-sizing: border-box;
-}
-
-.y-testimonials-carousel-dots {
-  gap: $spacer * 0.75;
-  margin-top: $spacer * 2;
-  padding: 0;
 }
 
 .y-testimonials-carousel-dot {
@@ -89,7 +65,7 @@
   }
 
   .y-testimonials-carousel-slide.y-testimonials-item {
-    height: 286px;
+    min-height: 286px;
   }
 }
 
@@ -99,7 +75,7 @@
   }
 
   .y-testimonials-carousel-slide.y-testimonials-item {
-    height: 243px;
+    min-height: 243px;
   }
 
   .y-testimonials-carousel-slide .y-testimonials-item-quote {

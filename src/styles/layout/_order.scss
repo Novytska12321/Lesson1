@@ -10,22 +10,6 @@
   }
 }
 
-.y-order form {
-  margin-bottom: $order-btn-gap;
-
-  @include media-breakpoint-up(desktop) {
-    height: $order-form-height;
-  }
-
-  @include media-breakpoint-down(desktop) {
-    height: auto;
-  }
-
-  @include media-breakpoint-only(tablet) {
-    margin-bottom: 100px;
-  }
-}
-
 .y-order textarea {
   height: 12.25rem; // 196px
   resize: none;
@@ -33,17 +17,10 @@
 
 .y-order-text {
   font-size: $order-text-font-size;
-  margin-bottom: 2.5rem;
 }
 
 .y-order-form {
   max-width: 30rem;
-
-  @include media-breakpoint-only(tablet) {
-    .y-order-btn {
-      margin-top: $order-btn-gap;
-    }
-  }
 }
 
 .y-order-gap {
@@ -72,10 +49,6 @@
 }
 
 @include media-breakpoint-down(tablet) {
-  .y-order form {
-    margin-bottom: 0;
-  }
-
   .y-order-text {
     font-size: 32px;
   }
