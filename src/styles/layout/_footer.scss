@@ -25,9 +25,7 @@
   margin-bottom: $footer-nav-margin-bottom;
 
   @include media-breakpoint-down(tablet) {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: $spacer;
     justify-items: start;
     text-align: center;
 
@@ -77,10 +75,6 @@
   @include media-breakpoint-only(tablet) {
     font-size: 54px;
     line-height: 1.1852;
-
-    .y-footer-text-last-word {
-      display: block;
-    }
   }
 
   @include media-breakpoint-down(tablet) {

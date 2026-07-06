@@ -20,7 +20,7 @@
             <img class="navbar-brand" src="/desctop-img/logo.svg" alt="Vyshyvanka Vibes logo" />
           </h1>
           <nav class="d-none d-desktop-flex">
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav me-auto flex-desktop-row align-items-desktop-center">
               <li class="nav-item">
                 <a class="nav-link y-nav-link" href="#about-us">About us</a>
               </li>
@@ -45,7 +45,7 @@
           >
           <span class="y-navbar-social-btns d-inline-flex position-relative">
             <a
-              class="btn btn-outline-primary y-btn-outline-primary y-btn-outline-primary-social"
+              class="btn btn-outline-primary y-btn-outline-primary y-btn-outline-primary-social d-inline-flex align-items-center justify-content-center"
               href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -53,7 +53,7 @@
               ><i class="fa-brands fa-facebook-f" aria-hidden="true"></i
             ></a>
             <a
-              class="btn btn-outline-primary y-btn-outline-primary y-btn-outline-primary-social"
+              class="btn btn-outline-primary y-btn-outline-primary y-btn-outline-primary-social d-inline-flex align-items-center justify-content-center"
               href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,7 +61,7 @@
               ><i class="fa-brands fa-instagram" aria-hidden="true"></i
             ></a>
             <a
-              class="btn btn-outline-primary y-btn-outline-primary y-btn-outline-primary-social"
+              class="btn btn-outline-primary y-btn-outline-primary y-btn-outline-primary-social d-inline-flex align-items-center justify-content-center"
               href="https://www.youtube.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -77,7 +77,7 @@
             aria-controls="mobile-menu"
           >
             <img
-              class="y-navbar-menu-icon"
+              class="y-navbar-menu-icon d-block"
               src="/tablet-img/Nav.svg"
               alt=""
               width="44"
@@ -127,7 +127,7 @@
     <!-- space / gap / margin -->
     <section class="y-hero">
       <div class="container">
-        <div class="row">
+        <div class="row align-items-tablet-start align-items-desktop-stretch">
           <div class="col-12 col-desktop-4 order-3 order-desktop-1">
             <img
               class="y-hero-img img-fluid"
@@ -151,7 +151,7 @@
             </a>
           </div>
           <div
-            class="col-12 col-tablet-2 col-desktop-2 order-2 order-desktop-3 y-hero-handmade-col"
+            class="col-12 col-tablet-2 col-desktop-2 order-2 order-desktop-3 y-hero-handmade-col d-none d-tablet-flex d-desktop-block justify-content-tablet-end"
           >
             <div class="d-flex justify-content-end">
               <div class="y-hero-handmade mt-5 pt-3 mb-5">
@@ -209,7 +209,7 @@
           <div class="col-12 col-tablet-6 col-desktop-4">
             <article class="y-our-collection-item">
               <img
-                class="y-our-collection-img img-fluid"
+                class="y-our-collection-img img-fluid d-block"
                 src="/desctop-img/image63.jpg"
                 alt="august poltava women's blouse"
               />
@@ -220,7 +220,7 @@
           <div class="col-12 col-tablet-6 col-desktop-4">
             <article class="y-our-collection-item">
               <img
-                class="y-our-collection-img img-fluid"
+                class="y-our-collection-img img-fluid d-block"
                 src="/desctop-img/image2.jpg"
                 alt="women's blouse gorgany"
               />
@@ -231,7 +231,7 @@
           <div class="col-12 col-tablet-6 col-desktop-4">
             <article class="y-our-collection-item">
               <img
-                class="y-our-collection-img img-fluid"
+                class="y-our-collection-img img-fluid d-block"
                 src="/desctop-img/image3.jpg"
                 alt="product3 women's blouse crimea"
               />
@@ -242,7 +242,7 @@
           <div class="col-12 col-tablet-6 col-desktop-4">
             <article class="y-our-collection-item">
               <img
-                class="y-our-collection-img img-fluid"
+                class="y-our-collection-img img-fluid d-block"
                 src="/desctop-img/image4.jpg"
                 alt="men's shirt verkhovina"
               />
@@ -253,7 +253,7 @@
           <div class="col-12 col-tablet-6 col-desktop-4">
             <article class="y-our-collection-item">
               <img
-                class="y-our-collection-img img-fluid"
+                class="y-our-collection-img img-fluid d-block"
                 src="/desctop-img/image5.jpg"
                 alt="mountain men's shirt"
               />
@@ -264,7 +264,7 @@
           <div class="col-12 col-tablet-6 col-desktop-4">
             <article class="y-our-collection-item">
               <img
-                class="y-our-collection-img img-fluid"
+                class="y-our-collection-img img-fluid d-block"
                 src="/desctop-img/image6.jpg"
                 alt="men's shirt yasen"
               />
@@ -276,16 +276,18 @@
       </div>
     </section>
     <section class="y-big-img">
-      <img class="y-big-img-image" src="/desctop-img/bigImage.jpg" alt="women's blouse yasen" />
+      <img class="y-big-img-image d-block" src="/desctop-img/bigImage.jpg" alt="women's blouse yasen" />
     </section>
     <section class="y-order" id="order">
       <div class="container">
-        <div class="d-flex y-order-layout">
-          <div>
-            <img class="y-order-img" src="/desctop-img/orderImg.jpg" alt="order image" />
+        <div class="d-flex flex-column flex-desktop-row">
+          <div
+            class="d-none d-tablet-flex d-desktop-block justify-content-tablet-center order-tablet-2 order-desktop-0"
+          >
+            <img class="y-order-img d-block" src="/desctop-img/orderImg.jpg" alt="order image" />
           </div>
-          <div class="y-order-gap"></div>
-          <div>
+          <div class="y-order-gap d-none d-desktop-block"></div>
+          <div class="order-tablet-1 order-desktop-0">
             <h2 class="y-order-text">
               <span class="text-secondary">Your order</span> is our priority:<br />
               Personalized approach and quality of service
@@ -313,7 +315,7 @@
                   required
                 />
               </div>
-              <div class="mb-3">
+              <div class="mb-0 mb-desktop-3">
                 <label class="form-label" for="order-comments">Comments</label>
                 <textarea
                   id="order-comments"
@@ -324,7 +326,7 @@
               </div>
               <button
                 type="submit"
-                class="btn y-btn y-btn-with-icon btn-outline-primary y-btn-outline-primary y-order-btn"
+                class="btn y-btn y-btn-with-icon btn-outline-primary y-btn-outline-primary y-order-btn d-block d-tablet-inline-block mx-auto mx-tablet-0"
               >
                 Order
                 <i class="fa-solid fa-arrow-right"></i>
@@ -339,14 +341,14 @@
         <h2 class="y-testimonials-heading">Testimonials</h2>
 
         <div
-          class="y-testimonials-carousel"
+          class="y-testimonials-carousel d-flex flex-column align-items-center d-desktop-none w-100 mx-auto"
           aria-roledescription="carousel"
           aria-label="Testimonials"
         >
           <div class="y-testimonials-carousel-viewport">
-            <div class="y-testimonials-carousel-track">
+            <div class="y-testimonials-carousel-track d-flex">
               <article
-                class="y-testimonials-carousel-slide y-testimonials-item rounded border"
+                class="y-testimonials-carousel-slide y-testimonials-item rounded border d-flex flex-column align-items-center justify-content-start"
                 aria-roledescription="slide"
               >
                 <img
@@ -363,7 +365,7 @@
                 </p>
               </article>
               <article
-                class="y-testimonials-carousel-slide y-testimonials-item rounded border"
+                class="y-testimonials-carousel-slide y-testimonials-item rounded border d-flex flex-column align-items-center justify-content-start"
                 aria-roledescription="slide"
                 aria-hidden="true"
               >
@@ -381,7 +383,7 @@
                 </p>
               </article>
               <article
-                class="y-testimonials-carousel-slide y-testimonials-item rounded border"
+                class="y-testimonials-carousel-slide y-testimonials-item rounded border d-flex flex-column align-items-center justify-content-start"
                 aria-roledescription="slide"
                 aria-hidden="true"
               >
@@ -400,7 +402,11 @@
               </article>
             </div>
           </div>
-          <div class="y-testimonials-carousel-dots" role="tablist" aria-label="Choose testimonial">
+          <div
+            class="y-testimonials-carousel-dots d-flex justify-content-center"
+            role="tablist"
+            aria-label="Choose testimonial"
+          >
             <button
               type="button"
               class="y-testimonials-carousel-dot is-active"
@@ -425,9 +431,9 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row d-none d-desktop-flex">
           <div class="col-4">
-            <article class="y-testimonials-item rounded border">
+            <article class="y-testimonials-item rounded border d-flex flex-column align-items-center justify-content-start">
               <img
                 class="y-testimonials-item-img rounded-circle mb-2"
                 src="/desctop-img/Ellipse1.png"
@@ -444,7 +450,7 @@
           </div>
 
           <div class="col-4 d-none d-tablet-block">
-            <article class="y-testimonials-item rounded border">
+            <article class="y-testimonials-item rounded border d-flex flex-column align-items-center justify-content-start">
               <img
                 class="y-testimonials-item-img rounded-circle mb-2"
                 src="/desctop-img/Ellipse2.png"
@@ -461,7 +467,7 @@
           </div>
 
           <div class="col-4 d-none d-desktop-block">
-            <article class="y-testimonials-item rounded border">
+            <article class="y-testimonials-item rounded border d-flex flex-column align-items-center justify-content-start">
               <img
                 class="y-testimonials-item-img rounded-circle mb-2"
                 src="/desctop-img/Ellipse3.png"
@@ -481,7 +487,7 @@
     </section>
     <footer class="y-footer border-top">
       <div class="container">
-        <ul class="nav y-footer-nav pt-4">
+        <ul class="nav y-footer-nav pt-4 d-grid d-tablet-flex gap-3 gap-tablet-0">
           <li class="nav-item">
             <a class="nav-link y-footer-nav-link" href="#about-us">about us</a>
           </li>
@@ -498,7 +504,9 @@
         <div class="y-footer-text">
           A touch of <span class="text-secondary">Ukrainian</span><br />
           culture in every
-          <span class="y-footer-text-last-word">embroidery</span>
+          <span class="y-footer-text-last-word d-inline d-tablet-block d-desktop-inline"
+            >embroidery</span
+          >
         </div>
       </div>
     </footer>
