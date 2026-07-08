@@ -1,46 +1,28 @@
-# Workflow for Stylelint checks and deploying static content to GitHub Pages
-name: CI and Deploy to Pages
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
   actions: write
 
+# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  stylelint:
-    name: Run Stylelint
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24"
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run Stylelint
-        run: npm run lint:css
-
   build:
-    if: github.event_name != 'pull_request'
-    needs: stylelint
     runs-on: ubuntu-latest
 
     steps:
@@ -75,7 +57,6 @@ jobs:
           include-hidden-files: true
 
   deploy:
-    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:

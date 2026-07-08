@@ -11,8 +11,8 @@ globs:
 - Use semantic HTML first.
 - Keep the page easy to scan.
 - Prefer clear section boundaries over deeply nested markup.
-- **Use Bootstrap classes first for all styling** — layout, spacing, flex, typography, and components belong in HTML before any SCSS is considered.
-- Add project-specific `y-` classes and SCSS only when Bootstrap cannot achieve the required design.
+- Use Bootstrap classes for layout and common behavior when they fit naturally.
+- Add project-specific `y-` classes only when custom styling or behavior needs them.
 
 ## Page Structure
 
@@ -47,8 +47,6 @@ Typical structure:
   - call to action or form content
 
 ## Bootstrap Usage
-
-Bootstrap is the default styling tool. Always try Bootstrap in markup before adding or editing SCSS.
 
 Use Bootstrap where it improves readability and layout:
 - `container`

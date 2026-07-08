@@ -21,7 +21,7 @@ This is a small one-page landing page created as a learning project. It presents
 
 - `architecture/frontend/tech-stack.md` — stack, project layout, and file responsibilities
 - `architecture/frontend/how-to.md` — practical editing recipes and common workflows
-- `architecture/frontend/rules/styling.mdc` — Bootstrap-first styling (Bootstrap classes before SCSS), class naming, and visual structure rules
+- `architecture/frontend/rules/styling.mdc` — SCSS, class naming, Bootstrap usage, and visual structure rules
 - `architecture/frontend/rules/html-structure.mdc` — semantic HTML and markup organization rules
 
 ## Notes for AI Assistants
@@ -29,7 +29,6 @@ This is a small one-page landing page created as a learning project. It presents
 - Start with this file to understand the purpose of the `.ai/` folder.
 - Treat `.ai/` as the canonical source of instructions.
 - Use the linked files above for deeper guidance instead of inferring project-specific conventions.
-- **Styling priority: Bootstrap classes first, SCSS only as a last resort.** When implementing layout or visual changes, apply Bootstrap utilities and components in HTML first (`container`, `row`, `col-*`, spacing, flex, typography, buttons, etc.). Write custom SCSS only when Bootstrap genuinely cannot achieve the required design. Do not duplicate Bootstrap behavior in SCSS.
 - Mandatory Git workflow: for each new GitHub task/issue, create and work in a separate branch dedicated to that task (for example, task #1 -> `task-1`, task #2 -> `task-2`).
 - Mandatory Stylelint workflow: after creating or editing SCSS, always verify the code with `stylelint-config-standard-scss` by running `npm run lint:css`. Fix all reported issues before finishing the task.
 - If symlinks are unavailable in your environment, use the closest available agent entry files and keep them aligned with the content in `.ai/`.
