@@ -296,7 +296,15 @@
               <span class="text-secondary">Your order</span> is our priority:<br />
               Personalized approach and quality of service
             </h2>
-            <form class="y-order-form mb-0 mb-tablet-5 mb-desktop-0">
+            <form class="y-order-form mb-0 mb-tablet-5 mb-desktop-0" novalidate>
+              <input
+                type="text"
+                name="_honey"
+                class="y-order-form-honey"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
               <div class="mb-3">
                 <label class="form-label" for="order-full-name">Full name</label>
                 <input
@@ -335,6 +343,11 @@
                 Order
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
+              <div
+                class="y-order-form-status alert d-none mt-3 mb-0"
+                role="status"
+                aria-live="polite"
+              ></div>
             </form>
           </div>
         </div>
