@@ -1,17 +1,17 @@
 .y-our-collection {
   background-image: url("/desctop-img/elements-yellow.png");
   background-repeat: no-repeat;
-  background-position: left 14rem;
-  background-size: 20rem;
+  background-size: 8rem;
+  background-position: left 22rem;
 
   .container {
     --bs-gutter-x: 3rem;
     --bs-gutter-y: 1.5rem;
   }
 
-  @include media-breakpoint-down(tablet) {
-    background-size: 8rem;
-    background-position: left 22rem;
+  @include media-breakpoint-up(tablet) {
+    background-size: 20rem;
+    background-position: left 14rem;
   }
 }
 
@@ -21,9 +21,12 @@
   object-fit: cover;
 }
 
-@include media-breakpoint-down(tablet) {
-  .y-our-collection-heading {
-    font-size: 32px;
-    line-height: 1.375;
+.y-our-collection-heading {
+  font-size: 32px;
+  line-height: 1.375;
+
+  @include media-breakpoint-up(tablet) {
+    font-size: inherit;
+    line-height: inherit;
   }
 }

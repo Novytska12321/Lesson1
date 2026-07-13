@@ -16,11 +16,37 @@
 }
 
 .y-order-text {
-  font-size: $order-text-font-size;
+  font-size: 32px;
+
+  @include media-breakpoint-up(tablet) {
+    font-size: $order-text-font-size;
+  }
 }
 
 .y-order-form {
   max-width: 30rem;
+
+  .form-label,
+  .form-control,
+  .form-control::placeholder {
+    font-size: 14px;
+  }
+
+  .form-control {
+    padding: 14px 16px;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    .form-label,
+    .form-control,
+    .form-control::placeholder {
+      font-size: $font-size-base;
+    }
+
+    .form-control {
+      padding: $input-padding-y $input-padding-x;
+    }
+  }
 }
 
 .y-order-gap {
@@ -48,26 +74,14 @@
   }
 }
 
-@include media-breakpoint-down(tablet) {
-  .y-order-text {
-    font-size: 32px;
-  }
+.y-order-btn {
+  margin-top: $order-btn-gap;
+  font-size: 14px;
+  padding: 15px;
 
-  .y-order-form {
-    .form-label,
-    .form-control,
-    .form-control::placeholder {
-      font-size: 14px;
-    }
-
-    .form-control {
-      padding: 14px 16px;
-    }
-  }
-
-  .y-order-btn {
-    margin-top: $order-btn-gap;
-    font-size: 14px;
-    padding: 15px;
+  @include media-breakpoint-up(tablet) {
+    margin-top: 0;
+    font-size: $btn-font-size;
+    padding: $btn-padding-y $btn-padding-x;
   }
 }

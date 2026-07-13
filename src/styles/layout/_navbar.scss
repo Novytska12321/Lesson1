@@ -1,14 +1,23 @@
 .y-navbar {
   z-index: calc($zindex-dropdown - 1);
 
-  @include media-breakpoint-down(desktop) {
+  .navbar-brand {
+    margin-inline-end: 0;
+  }
+
+  .y-navbar-social-btns,
+  .y-navbar-menu-btn {
+    z-index: calc($zindex-dropdown + 1);
+  }
+
+  @include media-breakpoint-up(desktop) {
     .navbar-brand {
-      margin-inline-end: 0;
+      margin-inline-end: $navbar-brand-margin-end;
     }
 
     .y-navbar-social-btns,
     .y-navbar-menu-btn {
-      z-index: calc($zindex-dropdown + 1);
+      z-index: auto;
     }
   }
 
