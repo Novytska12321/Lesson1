@@ -21,7 +21,7 @@
   line-height: 1.375;
 
   @include media-breakpoint-up(tablet) {
-    font-size: inherit;
-    line-height: inherit;
+    font-size: 44px;
+    font-weight: $our-collection-font-weight;
   }
 }
