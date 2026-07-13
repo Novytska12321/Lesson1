@@ -1,21 +1,22 @@
 .y-footer {
   background-image: url("/desctop-img/elements-yellow.png");
   background-repeat: no-repeat;
-  background-position: right -9rem bottom;
-  background-size: auto 100%;
+  background-size: 110% auto;
+  background-position: right -2rem bottom;
+  padding-bottom: 110vw;
 
-  @include media-breakpoint-only(tablet) {
+  @include media-breakpoint-up(tablet) {
+    background-size: auto 100%;
     background-position: right -15rem bottom;
+    padding-bottom: 0;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    background-position: right -9rem bottom;
   }
 
   @include media-breakpoint-up(xxl) {
     background-position: right -4rem bottom 0;
-  }
-
-  @include media-breakpoint-down(tablet) {
-    background-size: 110% auto;
-    background-position: right -2rem bottom;
-    padding-bottom: 110vw;
   }
 }
 
@@ -28,8 +29,8 @@
 }
 
 .y-footer-text {
-  font-size: $footer-text-font-size;
-  line-height: 1.1563;
+  font-size: 44px;
+  line-height: 1.2273;
   letter-spacing: -0.03em;
   color: $footer-text-color;
 
@@ -38,8 +39,8 @@
     line-height: 1.1852;
   }
 
-  @include media-breakpoint-down(tablet) {
-    font-size: 44px;
-    line-height: 1.2273;
+  @include media-breakpoint-up(desktop) {
+    font-size: $footer-text-font-size;
+    line-height: 1.1563;
   }
 }

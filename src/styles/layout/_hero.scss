@@ -1,26 +1,25 @@
 .y-hero-img {
+  margin-top: 40px;
+
   @include media-breakpoint-only(tablet) {
     margin-top: 46px;
   }
 
-  @include media-breakpoint-down(tablet) {
-    margin-top: 40px;
+  @include media-breakpoint-up(desktop) {
+    margin-top: 0;
   }
 }
 
 .y-hero-lead-text {
   color: $hero-lead-color;
-  font-size: $hero-font-size;
-  line-height: 1.1563;
+  font-size: 44px;
+  line-height: 1.0909;
   letter-spacing: -0.03em;
-
-  @include media-breakpoint-down(tablet) {
-    font-size: 44px;
-    line-height: 1.0909;
-  }
 
   @include media-breakpoint-up(tablet) {
     @include font-size($hero-font-size-md);
+
+    line-height: 1.1563;
   }
 
   @include media-breakpoint-up(xxl) {
@@ -37,12 +36,13 @@
 }
 
 .y-hero-btn {
-  @include media-breakpoint-up(desktop) {
-    margin-left: 11.3125rem;
+  padding: 15px;
+
+  @include media-breakpoint-up(tablet) {
+    padding: $btn-padding-y $btn-padding-x;
   }
 
-  @include media-breakpoint-down(tablet) {
-    font-size: 14px;
-    padding: 15px;
+  @include media-breakpoint-up(desktop) {
+    margin-left: 11.3125rem;
   }
 }

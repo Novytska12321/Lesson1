@@ -95,9 +95,13 @@ Use it for:
 
 ## Responsive Design
 
+- This project follows a **mobile-first** responsive approach.
 - Use Bootstrap grid and utilities first.
-- Add custom media queries only when needed.
-- Keep mobile-first thinking.
+- Define mobile styles as the default base styles.
+- Apply larger-screen changes with `@include media-breakpoint-up()` only.
+- Do **not** use `@include media-breakpoint-down()` in project SCSS.
+- `media-breakpoint-only()` is allowed when a style must apply to exactly one breakpoint range.
+- Add custom media queries only when needed and only if they still follow mobile-first logic.
 
 ## Maintainability
 
