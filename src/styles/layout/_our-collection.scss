@@ -4,11 +4,6 @@
   background-size: 8rem;
   background-position: left 22rem;
 
-  .container {
-    --bs-gutter-x: 3rem;
-    --bs-gutter-y: 1.5rem;
-  }
-
   @include media-breakpoint-up(tablet) {
     background-size: 20rem;
     background-position: left 14rem;
